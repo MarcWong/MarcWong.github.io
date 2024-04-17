@@ -100,15 +100,15 @@ publications:
         authors: <b>Y. Wang</b>, Y. Jiang, Z. Hu, C. Ruhdorfer, M. Bâce, A. Bulling
         conference: "Proceedings of ACM on Human-Computer Interaction (PACM HCI), 2024"
 
-      - title: "Saliency3D: a 3D Saliency Dataset Collected on Screen"
+      - title: "Saliency3D: A 3D Saliency Dataset Collected on Screen"
         link: "https://perceptualui.org/publications/wang24_etras/"
         authors: <b>Y. Wang§</b>, Q. Dai§, M. Bâce, K. Klein, A. Bulling
-        conference: "2024 Symposium on Eye Tracking Research and Applications (ETRA), No. 18, pp. 1-9"
+        conference: "2024 Symposium on Eye Tracking Research and Applications (ETRA), No. 18, pp. 1-9, 2024"
 
       - title: "SalChartQA: Question-driven Saliency on Information Visualisations"
         link: "https://perceptualui.org/publications/wang24_chi/"
         authors: <b>Y. Wang</b>, W. Wang, A. Abdelhafez, M. Elfares, Z. Hu, M. Bâce, A. Bulling
-        conference: "Proc. ACM SIGCHI Conference on Human Factors in Computing Systems (CHI), 2024"
+        conference: "Proc. ACM SIGCHI Conference on Human Factors in Computing Systems (CHI), pp. 1-14, 2024"
 
       - title: "Scanpath Prediction on Information Visualisations"
         link: "https://perceptualui.org/publications/wang23_tvcg/"
@@ -123,7 +123,7 @@ publications:
       - title: Impact of Gaze Uncertainty on AOIs in Information Visualisations
         link: "https://perceptualui.org/publications/wang22_etvis/"
         authors: <b>Y. Wang§</b>, M. Koch§, M. Bâce, D. Weiskopf, A. Bulling
-        conference: "2022 Symposium on Eye Tracking Research and Applications (ETRA), No. 60, pp. 1-6"
+        conference: "2022 Symposium on Eye Tracking Research and Applications (ETRA), No. 60, pp. 1--6, 2022"
 
       - title: Semantic 3D Reconstruction with Learning MVS and 2D Segmentation of Aerial Images
         link: "https://www.mdpi.com/2076-3417/10/4/1275"
@@ -162,6 +162,14 @@ skills:
       - name: Natural Language Processing
         level: 70%
 
+      - name: Git
+        level: 70%
+
+      - name: Agile software development
+        level: 70%
+
+
+
     toolset:
       - name: Python (PyTorch, Keras, Numpy, Pandas, Django...)
         level: 98%
@@ -174,6 +182,9 @@ skills:
 
       - name: C++
         level: 70%
+
+      - name: Bash
+        level: 60%
 
       - name: Java
         level: 60%
