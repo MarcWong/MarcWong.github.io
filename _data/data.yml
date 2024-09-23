@@ -47,7 +47,7 @@ sidebar:
       title: Interests
       info:
         - item: Billiard Player@BC_Feuersee
-          link: https://billard-bvbw.de/verein-mitglied-statistiken.php?p=999--2023/2024-2496--368109
+          link: https://billard-bvbw.de/verein-mitglied-disziplin.php?p=999||2024/2025|2496||368109|||1|5
 
         - item: Drummer
           link: https://www.bilibili.com/video/BV1954y1a7U6/?spm_id_from=333.337.search-card.all.click 
@@ -56,7 +56,7 @@ sidebar:
 career-profile:
     title: Career Profile
     summary: |
-       I am a PhD student at University of Stuttgart since September 2020, and expected to graduate in September-December 2024. I am open to research and software development positions in industry, ideally in Germany.
+       I am a PhD student at University of Stuttgart since September 2020, and expected to graduate in November 2024. I am open to research and software development positions in industry, ideally in Germany.
 education:
     title: Education
     info:
