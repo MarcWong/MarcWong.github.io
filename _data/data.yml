@@ -56,7 +56,7 @@ sidebar:
 career-profile:
     title: Career Profile
     summary: |
-       I am a PhD student at University of Stuttgart since September 2020, and expected to graduate in November 2024. I am open to research and software development positions in industry, ideally in Germany.
+       I am a Postdoc researcher at the University of Stuttgart. I did my PhD during September 2020 - November 2024. I am open to research positions in industry and acedemic, ideally in Germany or Switzerland.
 education:
     title: Education
     info:
@@ -64,8 +64,9 @@ education:
         university: University of Stuttgart
         time: 2020 - 2024
         details: |
+            - Summa cum laude (1.0)
             - Institute of Visualisation and Interactive System
-            - Human-computer Interaction and Cognitive System Lab
+            - Collaborative AI Lab
       - degree: M.Sc. in Computer Software and Technology
         university: Peking University
         time: 2017 - 2020
@@ -82,7 +83,7 @@ experiences:
     title: Experiences
     info:
       - role: PhD Student
-        time: 2020 - Present
+        time: 2020 - 2024
         company: University of Stuttgart
         details: |
           My PhD topic is visual attention modelling for optimization of information visualizations, which integrated to Project A07 in <a href="https://www.sfbtrr161.de/research/project_a07/">SFB-TRR 161</a>.
@@ -201,20 +202,26 @@ footer: >
 updates:
     title: Updates
     images:
-      - name: /assets/images/2023-02-20-aalto.jpg
-        desp: I enjoyed skiing a lot during my research stay at Aalto University, Finland.
-
-      - name: /assets/images/2023-04-25-chi23.jpg
-        desp: I served as a student volunteer at CHI 2023 in Hamburg. Photo with Aalto crews.
-
-      - name: /assets/images/2023-06-02-etra23.jpg
-        desp: PETMEI workshop@ETRA 2023 in Tübingen.
-
-      - name: /assets/images/2024-05-16-chi24.jpg
-        desp: I presented my paper at CHI 2024 in Hawaii.
+      - name: /assets/images/2024-11-05-phd-defense-yao-wang.jpg
+        desp: I defended my PhD with summa cum laude on November 2024!
 
       - name: /assets/images/2024-06-04-etra24.jpg
         desp: Andreas Bulling Team (previous and now) at ETRA 2024 in Glasgow.
 
-      - name: /assets/images/2024-11-05-phd-defense-yao-wang.jpg
-        desp: I defended my PhD with summa cum laude on November 2024!
+      - name: /assets/images/2024-05-16-chi24.jpg
+        desp: I presented my paper at CHI 2024 in Hawaii.
+
+      - name: /assets/images/2023-06-02-etra23.jpg
+        desp: PETMEI workshop at ETRA 2023 in Tübingen.
+
+      - name: /assets/images/2023-04-25-chi23.jpg
+        desp: I served as a student volunteer at CHI 2023 in Hamburg. Photo with Aalto crews.
+
+      - name: /assets/images/2023-02-20-aalto.jpg
+        desp: I enjoyed skiing during my research stay at Aalto University, Finland.
+
+      - name: /assets/images/2022-06-11-etra2022.jpg
+        desp: I visited Seattle for ETRA 2022.
+
+      - name: /assets/images/2021-12-24-grancanaria.jpg
+        desp: I visited Gran Canaria during Christmas in 2021.
