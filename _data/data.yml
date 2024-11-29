@@ -62,7 +62,7 @@ education:
     info:
       - degree: PhD in Computer Science
         university: University of Stuttgart
-        time: 2020 - now
+        time: 2020 - 2024
         details: |
             - Institute of Visualisation and Interactive System
             - Human-computer Interaction and Cognitive System Lab
@@ -88,14 +88,18 @@ experiences:
           My PhD topic is visual attention modelling for optimization of information visualizations, which integrated to Project A07 in <a href="https://www.sfbtrr161.de/research/project_a07/">SFB-TRR 161</a>.
           My first research goal is acquiring large-scale humanlike attention data without eye tracking equipment on information visualizations. I turn to crowdsourcing approaches (webcam or mouse-clicking) or gaze data synthesis by generative or cognitive models. My second research goal is to computationally model human visual behaviour (saliency map, scanpath) under different tasks (top-down) in information visualizations. My third research goal is to develop a task-driven computational model to optimize information visualisation by maximising metrics (e.g. recallability, gaze uncertainty).
 
-
 publications:
     title: Publications
     intro: |
       See my <a href="https://scholar.google.com/citations?user=X8je0QsAAAAJ">Google Scholar</a> page for full publication list. <br>
       §: Equal contribution.
     papers:
-      - title: "VisRecall++: Analysing and Predicting Recallability of Information Visualisations from Gaze Behaviour "
+      # - title: "ChartOptimiser: Task-driven Optimisation of Chart Designs"
+      #   link: "https://perceptualui.org/publications/wang24_chi/"
+      #   authors: <b>Y. Wang</b>, W. Wang, D. Shi, G. Pan, Z. Hu, A. Oulasvirta, A. Bulling
+      #   conference: "Proc. ACM SIGCHI Conference on Human Factors in Computing Systems (CHI), pp. 1-14, 2024"
+
+      - title: "VisRecall++: Analysing and Predicting Recallability of Information Visualisations from Gaze Behaviour"
         link: "https://perceptualui.org/publications/wang24_etra/"
         authors: <b>Y. Wang</b>, Y. Jiang, Z. Hu, C. Ruhdorfer, M. Bâce, A. Bulling
         conference: "Proceedings of ACM on Human-Computer Interaction (PACM HCI), 2024"
@@ -113,7 +117,7 @@ publications:
       - title: "Scanpath Prediction on Information Visualisations"
         link: "https://perceptualui.org/publications/wang23_tvcg/"
         authors: <b>Y. Wang</b>, M. Bâce, A. Bulling
-        conference: "IEEE Transactions on Visualization and Computer Graphics (TVCG), early access, pp. 1-13, 6 Feb. 2023"
+        conference: "IEEE Transactions on Visualization and Computer Graphics (TVCG), vol. 30, no. 7, pp. 3902-3914, 6 Feb. 2023"
 
       - title: "VisRecall: Quantifying Information Visualisation Recallability via Question Answering"
         link: "https://perceptualui.org/publications/wang22_tvcg/"
@@ -144,30 +148,26 @@ skills:
     knowledgetitle: Knowledge Bases
     title: Programming Languages
     knowledgeset:
-      - name: Eye Tracking
+      - name: Eye Tracking, Human Visual Attention
         level: 98%
 
       - name: Deep Learning
-        level: 95%
+        level: 94%
 
       - name: Computer Vision
-        level: 95%
+        level: 93%
 
       - name: Information Visualization
         level: 85%
 
       - name: Human Computer Interaction
-        level: 85%
+        level: 82%
+
+      - name: VR/AR
+        level: 78%
 
       - name: Natural Language Processing
         level: 70%
-
-      - name: Git
-        level: 70%
-
-      - name: Agile software development
-        level: 70%
-
 
 
     toolset:
@@ -176,6 +176,9 @@ skills:
 
       - name: Javascript (Vue.js), CSS, HTML
         level: 90%
+
+      - name: Git
+        level: 85%
 
       - name: Matlab
         level: 75%
@@ -194,3 +197,24 @@ skills:
 
 footer: >
     Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a>
+
+updates:
+    title: Updates
+    images:
+      - name: /assets/images/2023-02-20-aalto.jpg
+        desp: I enjoyed skiing a lot during my research stay at Aalto University, Finland.
+
+      - name: /assets/images/2023-04-25-chi23.jpg
+        desp: I served as a student volunteer at CHI 2023 in Hamburg. Photo with Aalto crews.
+
+      - name: /assets/images/2023-06-02-etra23.jpg
+        desp: PETMEI workshop@ETRA 2023 in Tübingen.
+
+      - name: /assets/images/2024-05-16-chi24.jpg
+        desp: I presented my paper at CHI 2024 in Hawaii.
+
+      - name: /assets/images/2024-06-04-etra24.jpg
+        desp: Andreas Bulling Team (previous and now) at ETRA 2024 in Glasgow.
+
+      - name: /assets/images/2024-11-05-phd-defense-yao-wang.jpg
+        desp: I defended my PhD with summa cum laude on November 2024!
