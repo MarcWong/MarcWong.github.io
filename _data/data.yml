@@ -56,7 +56,7 @@ sidebar:
 career-profile:
     title: Career Profile
     summary: |
-       I am a Postdoc researcher at the University of Stuttgart. I did my PhD during September 2020 - November 2024. I am open to research positions in industry and acedemic, ideally in Germany or Switzerland.
+       I am a Postdoc researcher at the University of Stuttgart. I did my PhD during September 2020 - November 2024. I am open to research-related positions in both industry and acedemic fields.
 education:
     title: Education
     info:
@@ -96,9 +96,19 @@ publications:
       §: Equal contribution.
     papers:
       # - title: "ChartOptimiser: Task-driven Optimisation of Chart Designs"
-      #   link: "https://perceptualui.org/publications/wang24_chi/"
+      #   link: "https://perceptualui.org/publications/wang25_chi/"
       #   authors: <b>Y. Wang</b>, W. Wang, D. Shi, G. Pan, Z. Hu, A. Oulasvirta, A. Bulling
-      #   conference: "Proc. ACM SIGCHI Conference on Human Factors in Computing Systems (CHI), pp. 1-14, 2024"
+      #   conference: "Proc. ACM SIGCHI Conference on Human Factors in Computing Systems (CHI), pp. 1-14, 2025"
+
+      - title: "Chartist: Task-driven Eye Movement Control for Chart Reading"
+        link: "https://perceptualui.org/publications/shi25_chi/"
+        authors: D. Shi, <b>Y. Wang</b>, Y. Bai, A. Bulling, A. Oulasvirta
+        conference: "Proc. ACM SIGCHI Conference on Human Factors in Computing Systems (CHI), pp. 1-14, 2025"
+
+      - title: "SalChartQA: Question-driven Saliency on Information Visualisations"
+        link: "https://perceptualui.org/publications/wang24_chi/"
+        authors: <b>Y. Wang</b>, W. Wang, A. Abdelhafez, M. Elfares, Z. Hu, M. Bâce, A. Bulling
+        conference: "Proc. ACM SIGCHI Conference on Human Factors in Computing Systems (CHI), pp. 1-14, 2024"
 
       - title: "VisRecall++: Analysing and Predicting Recallability of Information Visualisations from Gaze Behaviour"
         link: "https://perceptualui.org/publications/wang24_etra/"
@@ -172,7 +182,7 @@ skills:
 
 
     toolset:
-      - name: Python (PyTorch, Keras, Numpy, Pandas, Django...)
+      - name: Python (PyTorch, Keras, Pandas, Django...)
         level: 98%
 
       - name: Javascript (Vue.js), CSS, HTML
@@ -193,7 +203,7 @@ skills:
       - name: Java
         level: 60%
 
-      - name: Php
+      - name: PhP
         level: 60%
 
 footer: >
