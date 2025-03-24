@@ -100,20 +100,25 @@ publications:
       #   authors: <b>Y. Wang</b>, W. Wang, D. Shi, G. Pan, Z. Hu, A. Oulasvirta, A. Bulling
       #   conference: "Proc. ACM SIGCHI Conference on Human Factors in Computing Systems (CHI), pp. 1-14, 2025"
 
+      - title: "ChartQC: Question Classification from Human Attention Data on Charts"
+        link: "https://perceptualui.org/publications/nishiyasu25_etvis/"
+        authors: T. Nishiyasu§, T. Kostorz§, <b>Y. Wang</b>, Y. Sato, A. Bulling
+        conference: "2025 Symposium on Eye Tracking Research and Applications (ETRA), pp. 1-6, 2025"
+
+      - title: "RelEYEance: Gaze-based Assessment of Users’ AI-reliance at Run-time"
+        link: "https://perceptualui.org/publications/wu25_etra"
+        authors: Z. Wu, <b>Y. Wang</b>, M. Langer, A. Feit
+        conference: "Proc. ACM on Human-Computer Interaction (PACM HCI), pp. 1-18, 2025"
+
       - title: "Chartist: Task-driven Eye Movement Control for Chart Reading"
         link: "https://perceptualui.org/publications/shi25_chi/"
         authors: D. Shi, <b>Y. Wang</b>, Y. Bai, A. Bulling, A. Oulasvirta
         conference: "Proc. ACM SIGCHI Conference on Human Factors in Computing Systems (CHI), pp. 1-14, 2025"
 
-      - title: "SalChartQA: Question-driven Saliency on Information Visualisations"
-        link: "https://perceptualui.org/publications/wang24_chi/"
-        authors: <b>Y. Wang</b>, W. Wang, A. Abdelhafez, M. Elfares, Z. Hu, M. Bâce, A. Bulling
-        conference: "Proc. ACM SIGCHI Conference on Human Factors in Computing Systems (CHI), pp. 1-14, 2024"
-
       - title: "VisRecall++: Analysing and Predicting Recallability of Information Visualisations from Gaze Behaviour"
         link: "https://perceptualui.org/publications/wang24_etra/"
         authors: <b>Y. Wang</b>, Y. Jiang, Z. Hu, C. Ruhdorfer, M. Bâce, A. Bulling
-        conference: "Proceedings of ACM on Human-Computer Interaction (PACM HCI), 2024"
+        conference: "Proc. ACM on Human-Computer Interaction (PACM HCI), pp. 1-18, 2024"
 
       - title: "Saliency3D: A 3D Saliency Dataset Collected on Screen"
         link: "https://perceptualui.org/publications/wang24_etras/"
@@ -138,7 +143,7 @@ publications:
       - title: Impact of Gaze Uncertainty on AOIs in Information Visualisations
         link: "https://perceptualui.org/publications/wang22_etvis/"
         authors: <b>Y. Wang§</b>, M. Koch§, M. Bâce, D. Weiskopf, A. Bulling
-        conference: "2022 Symposium on Eye Tracking Research and Applications (ETRA), No. 60, pp. 1--6, 2022"
+        conference: "2022 Symposium on Eye Tracking Research and Applications (ETRA), No. 60, pp. 1-6, 2022"
 
       - title: Semantic 3D Reconstruction with Learning MVS and 2D Segmentation of Aerial Images
         link: "https://www.mdpi.com/2076-3417/10/4/1275"
@@ -218,8 +223,8 @@ updates:
       - name: /assets/images/2024-06-04-etra24.jpg
         desp: Andreas Bulling Team (previous and now) at ETRA 2024 in Glasgow.
 
-      - name: /assets/images/2024-05-16-chi24.jpg
-        desp: I presented my paper at CHI 2024 in Hawaii.
+      - name: /assets/images/2024-05-15-chi24.jpg
+        desp: Stuttgarters at CHI 2024 in Hawaii.
 
       - name: /assets/images/2023-06-02-etra23.jpg
         desp: PETMEI workshop at ETRA 2023 in Tübingen.
