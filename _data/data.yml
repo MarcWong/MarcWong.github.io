@@ -90,75 +90,70 @@ experiences:
           My first research goal is acquiring large-scale humanlike attention data without eye tracking equipment on information visualizations. I turn to crowdsourcing approaches (webcam or mouse-clicking) or gaze data synthesis by generative or cognitive models. My second research goal is to computationally model human visual behaviour (saliency map, scanpath) under different tasks (top-down) in information visualizations. My third research goal is to develop a task-driven computational model to optimize information visualisation by maximising metrics (e.g. recallability, gaze uncertainty).
 
 publications:
-    title: Publications
+    title: Selected Publications
     intro: |
       See my <a href="https://scholar.google.com/citations?user=X8je0QsAAAAJ">Google Scholar</a> page for full publication list. <br>
       §: Equal contribution.
     papers:
-      # - title: "ChartOptimiser: Task-driven Optimisation of Chart Designs"
-      #   link: "https://perceptualui.org/publications/wang25_chi/"
-      #   authors: <b>Y. Wang</b>, W. Wang, D. Shi, G. Pan, Z. Hu, A. Oulasvirta, A. Bulling
-      #   conference: "Proc. ACM SIGCHI Conference on Human Factors in Computing Systems (CHI), pp. 1-14, 2025"
+      # - title: "Tell Me Without Telling Me:Two-Way Prediction of Visualization Literacy and Visual Attention"
+      #   link: ""
+      #   authors: M. Chang, <b>Y. Wang</b>, H. Wang, A. Bulling, C. Xiong
+      #   conference: ""
 
-      - title: "ChartQC: Question Classification from Human Attention Data on Charts"
-        link: "https://perceptualui.org/publications/nishiyasu25_etvis/"
-        authors: T. Nishiyasu§, T. Kostorz§, <b>Y. Wang</b>, Y. Sato, A. Bulling
-        conference: "2025 Symposium on Eye Tracking Research and Applications (ETRA), pp. 1-6, 2025"
+      # - title: "ChartOptimiser: Task-driven Optimisation of Chart Designs"
+      #   link: "https://collaborative-ai.org/publications/wang25_chi/"
+      #   authors: <b>Y. Wang</b>, D. Shi, G. Pan, Z. Hu, A. Oulasvirta, A. Bulling
+      #   conference: "Proc. ACM, pp. 1-14, 2025"
+
+      - title: "Grid Labeling: Crowdsourcing Task-Specific Importance from Visualizations"
+        link: "https://www.collaborative-ai.org/publications/chang25_eurovis/"
+        authors: M. Chang, <b>Y. Wang</b>, H. Wang, A. Bulling, C. Xiong
+        conference: "The Eurographics Association, 2025"
 
       - title: "RelEYEance: Gaze-based Assessment of Users’ AI-reliance at Run-time"
-        link: "https://perceptualui.org/publications/wu25_etra"
+        link: "https://collaborative-ai.org/publications/wu25_etra"
         authors: Z. Wu, <b>Y. Wang</b>, M. Langer, A. Feit
         conference: "Proc. ACM on Human-Computer Interaction (PACM HCI), pp. 1-18, 2025"
 
       - title: "Chartist: Task-driven Eye Movement Control for Chart Reading"
-        link: "https://perceptualui.org/publications/shi25_chi/"
+        link: "https://collaborative-ai.org/publications/shi25_chi/"
         authors: D. Shi, <b>Y. Wang</b>, Y. Bai, A. Bulling, A. Oulasvirta
         conference: "Proc. ACM SIGCHI Conference on Human Factors in Computing Systems (CHI), pp. 1-14, 2025"
 
       - title: "VisRecall++: Analysing and Predicting Recallability of Information Visualisations from Gaze Behaviour"
-        link: "https://perceptualui.org/publications/wang24_etra/"
+        link: "https://collaborative-ai.org/publications/wang24_etra/"
         authors: <b>Y. Wang</b>, Y. Jiang, Z. Hu, C. Ruhdorfer, M. Bâce, A. Bulling
         conference: "Proc. ACM on Human-Computer Interaction (PACM HCI), pp. 1-18, 2024"
 
       - title: "Saliency3D: A 3D Saliency Dataset Collected on Screen"
-        link: "https://perceptualui.org/publications/wang24_etras/"
+        link: "https://collaborative-ai.org/publications/wang24_etras/"
         authors: <b>Y. Wang§</b>, Q. Dai§, M. Bâce, K. Klein, A. Bulling
         conference: "2024 Symposium on Eye Tracking Research and Applications (ETRA), No. 18, pp. 1-9, 2024"
 
       - title: "SalChartQA: Question-driven Saliency on Information Visualisations"
-        link: "https://perceptualui.org/publications/wang24_chi/"
+        link: "https://collaborative-ai.org/publications/wang24_chi/"
         authors: <b>Y. Wang</b>, W. Wang, A. Abdelhafez, M. Elfares, Z. Hu, M. Bâce, A. Bulling
         conference: "Proc. ACM SIGCHI Conference on Human Factors in Computing Systems (CHI), pp. 1-14, 2024"
 
       - title: "Scanpath Prediction on Information Visualisations"
-        link: "https://perceptualui.org/publications/wang23_tvcg/"
+        link: "https://collaborative-ai.org/publications/wang23_tvcg/"
         authors: <b>Y. Wang</b>, M. Bâce, A. Bulling
         conference: "IEEE Transactions on Visualization and Computer Graphics (TVCG), vol. 30, no. 7, pp. 3902-3914, 6 Feb. 2023"
 
       - title: "VisRecall: Quantifying Information Visualisation Recallability via Question Answering"
-        link: "https://perceptualui.org/publications/wang22_tvcg/"
+        link: "https://collaborative-ai.org/publications/wang22_tvcg/"
         authors: <b>Y. Wang</b>, C. Jiao, M. Bâce, A. Bulling
         conference: "IEEE Transactions on Visualization and Computer Graphics (TVCG), vol. 28, no. 12, pp. 4995-5005, 1 Dec. 2022"
 
       - title: Impact of Gaze Uncertainty on AOIs in Information Visualisations
-        link: "https://perceptualui.org/publications/wang22_etvis/"
+        link: "https://collaborative-ai.org/publications/wang22_etvis/"
         authors: <b>Y. Wang§</b>, M. Koch§, M. Bâce, D. Weiskopf, A. Bulling
         conference: "2022 Symposium on Eye Tracking Research and Applications (ETRA), No. 60, pp. 1-6, 2022"
-
-      - title: Semantic 3D Reconstruction with Learning MVS and 2D Segmentation of Aerial Images
-        link: "https://www.mdpi.com/2076-3417/10/4/1275"
-        authors: Z. Wei§, <b>Y. Wang§</b>, H. Yi, Y. Chen, G. Wang
-        conference: "Applied Sciences, 10(4), pp. 1275, 2020"
 
       - title: Large-scale Structure from Motion with Semantic Constraints of Aerial Images
         link: "https://link.springer.com/chapter/10.1007/978-3-030-03398-9_30"
         authors: Y. Chen§, <b>Y. Wang§</b>, P. Lu, Y. Chen, G. Wang
         conference: "Chinese Conference on Pattern Recognition and Computer Vision (PRCV), 2018: 347-359"
-
-      - title: Sobel Heuristic Kernel for Aerial Semantic Segmentation
-        link: "https://ieeexplore.ieee.org/document/8451170"
-        authors: T. Hu, <b>Y. Wang</b>, Y. Chen, P. Lu, H.Wang, G. Wang
-        conference: "25th IEEE International Conference on Image Processing (ICIP), 2018: 3074-3078"
 
 skills:
     knowledgetitle: Knowledge Bases
