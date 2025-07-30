@@ -95,25 +95,25 @@ publications:
       See my <a href="https://scholar.google.com/citations?user=X8je0QsAAAAJ">Google Scholar</a> page for full publication list. <br>
       §: Equal contribution.
     papers:
-      # - title: "Tell Me Without Telling Me:Two-Way Prediction of Visualization Literacy and Visual Attention"
-      #   link: ""
-      #   authors: M. Chang, <b>Y. Wang</b>, H. Wang, A. Bulling, C. Xiong
-      #   conference: ""
+      - title: "ChartOptimiser: Task-driven Optimisation of Chart Designs"
+        link: "https://collaborative-ai.org/publications/wang25_arxiv/"
+        authors: <b>Y. Wang</b>, D. Shi, G. Pan, Z. Hu, A. Oulasvirta, A. Bulling
+        conference: "Technical Report, pp. 1-14, 2025"
 
-      # - title: "ChartOptimiser: Task-driven Optimisation of Chart Designs"
-      #   link: "https://collaborative-ai.org/publications/wang25_chi/"
-      #   authors: <b>Y. Wang</b>, D. Shi, G. Pan, Z. Hu, A. Oulasvirta, A. Bulling
-      #   conference: "Proc. ACM, pp. 1-14, 2025"
+      - title: "Towards a Better Understanding of Graph Perception in Immersive Environments"
+        link: "https://collaborative-ai.org/publications/zhang25_gd/"
+        authors: L. Zhang§, <b>Y. Wang§</b>, Y. Zhang, W. Kerle-Malcharek, K. Klein, F. Schreiber, A. Bulling
+        conference: "The 33rd International Symposium on Graph Drawing and Network Visualization (GD), 2025"
+
+      - title: "Tell Me Without Telling Me: Two-Way Prediction of Visualization Literacy and Visual Attention"
+        link: "https://collaborative-ai.org/publications/chang25_vis/"
+        authors: M. Chang, <b>Y. Wang</b>, H. Wang, Y. Zhou, A. Bulling, C. Xiong
+        conference: "IEEE International Conference on Visualisation (VIS), 2025"
 
       - title: "Grid Labeling: Crowdsourcing Task-Specific Importance from Visualizations"
-        link: "https://www.collaborative-ai.org/publications/chang25_eurovis/"
+        link: "https://collaborative-ai.org/publications/chang25_eurovis/"
         authors: M. Chang, <b>Y. Wang</b>, H. Wang, A. Bulling, C. Xiong
-        conference: "The Eurographics Association, 2025"
-
-      - title: "RelEYEance: Gaze-based Assessment of Users’ AI-reliance at Run-time"
-        link: "https://collaborative-ai.org/publications/wu25_etra"
-        authors: Z. Wu, <b>Y. Wang</b>, M. Langer, A. Feit
-        conference: "Proc. ACM on Human-Computer Interaction (PACM HCI), pp. 1-18, 2025"
+        conference: "The Eurographics Association (EuroVIS), 2025"
 
       - title: "Chartist: Task-driven Eye Movement Control for Chart Reading"
         link: "https://collaborative-ai.org/publications/shi25_chi/"
