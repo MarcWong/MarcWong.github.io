@@ -14,7 +14,7 @@ sidebar:
 
     # Sidebar links
     email: yao.wang@vis.uni-stuttgart.de
-    phone: +49 0172 5388 764
+    phone: # +49 0172 5388 764
     timezone: CET
     address: Stuttgart, Germany
     citizenship: China
@@ -212,6 +212,9 @@ footer: >
 updates:
     title: Updates
     images:
+      - name: /assets/images/2025-09-24-gd25.jpg
+        desp: GD 2025 in Norrköping, Sweden.
+
       - name: /assets/images/2024-11-05-phd-defense-yao-wang.jpg
         desp: I defended my PhD with summa cum laude on November 2024!
 
@@ -223,6 +226,9 @@ updates:
 
       - name: /assets/images/2023-06-02-etra23.jpg
         desp: PETMEI workshop at ETRA 2023 in Tübingen.
+
+      - name: /assets/images/2025-09-22-billiard.jpg
+        desp: Billiard is my hobby since 2022. I play in a local club in Stuttgart.
 
       - name: /assets/images/2023-04-25-chi23.jpg
         desp: I served as a student volunteer at CHI 2023 in Hamburg. Photo with Aalto crews.
