@@ -95,8 +95,13 @@ publications:
       See my <a href="https://scholar.google.com/citations?user=X8je0QsAAAAJ">Google Scholar</a> page for full publication list. <br>
       §: Equal contribution.
     papers:
+      - title: "DiffGaze: A Diffusion Model for Modelling Fine-grained Human Gaze Behaviour on 360° Images"
+        link: "https://dl.acm.org/doi/10.1145/3772075/"
+        authors: C. Jiao, <b>Y. Wang</b>, G. Zhang, M. Bâce, Z. Hu, A. Bulling, 
+        conference: "ACM Transactions on Interactive Intelligent Systems (TiiS), 2025"
+
       - title: "ChartOptimiser: Task-driven Optimisation of Chart Designs"
-        link: "https://collaborative-ai.org/publications/wang25_arxiv/"
+        link: "https://arxiv.org/abs/2504.10180"
         authors: <b>Y. Wang</b>, D. Shi, G. Pan, Z. Hu, A. Oulasvirta, A. Bulling
         conference: "Technical Report, pp. 1-14, 2025"
 
@@ -160,22 +165,22 @@ skills:
     title: Programming Languages
     knowledgeset:
       - name: Eye Tracking, Human Visual Attention
-        level: 98%
-
-      - name: Deep Learning
-        level: 94%
-
-      - name: Computer Vision
-        level: 93%
+        level: 99%
 
       - name: Information Visualization
-        level: 85%
+        level: 95%
+
+      - name: Deep Learning
+        level: 90%
+
+      - name: Computer Vision
+        level: 90%
 
       - name: Human Computer Interaction
-        level: 82%
+        level: 85%
 
       - name: VR/AR
-        level: 78%
+        level: 80%
 
       - name: Natural Language Processing
         level: 70%
