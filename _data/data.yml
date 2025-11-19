@@ -56,7 +56,7 @@ sidebar:
 career-profile:
     title: Career Profile
     summary: |
-       I am a Postdoc researcher at the University of Stuttgart. I did my PhD during September 2020 - November 2024. I am open to research-related positions in both industry and acedemic fields.
+       I am a Postdoctoral researcher at the University of Stuttgart. I did my PhD during September 2020 - November 2024. I am open to research-related positions in both industry and acedemic fields.
 education:
     title: Education
     info:
@@ -87,7 +87,7 @@ experiences:
         company: University of Stuttgart
         details: |
           My PhD topic is visual attention modelling for optimization of information visualizations, which integrated to Project A07 in <a href="https://www.sfbtrr161.de/research/project_a07/">SFB-TRR 161</a>.
-          My first research goal is acquiring large-scale humanlike attention data without eye tracking equipment on information visualizations. I turn to crowdsourcing approaches (webcam or mouse-clicking) or gaze data synthesis by generative or cognitive models. My second research goal is to computationally model human visual behaviour (saliency map, scanpath) under different tasks (top-down) in information visualizations. My third research goal is to develop a task-driven computational model to optimize information visualisation by maximising metrics (e.g. recallability, gaze uncertainty).
+          My first research goal is acquiring large-scale humanlike attention data without eye tracking equipment on information visualizations. I turn to crowdsourcing approaches (webcam or mouse-clicking) or gaze data synthesis by generative or cognitive models. My second research goal is to computationally model human visual behaviour (saliency map, scanpath) under different tasks (top-down) in information visualizations. My third research goal is to optimize information visualisation design by maximising perceptual metrics.
 
 publications:
     title: Selected Publications
@@ -95,11 +95,6 @@ publications:
       See my <a href="https://scholar.google.com/citations?user=X8je0QsAAAAJ">Google Scholar</a> page for full publication list. <br>
       §: Equal contribution.
     papers:
-      - title: "DiffGaze: A Diffusion Model for Modelling Fine-grained Human Gaze Behaviour on 360° Images"
-        link: "https://dl.acm.org/doi/10.1145/3772075/"
-        authors: C. Jiao, <b>Y. Wang</b>, G. Zhang, M. Bâce, Z. Hu, A. Bulling, 
-        conference: "ACM Transactions on Interactive Intelligent Systems (TiiS), 2025"
-
       - title: "ChartOptimiser: Task-driven Optimisation of Chart Designs"
         link: "https://arxiv.org/abs/2504.10180"
         authors: <b>Y. Wang</b>, D. Shi, G. Pan, Z. Hu, A. Oulasvirta, A. Bulling
@@ -115,11 +110,6 @@ publications:
         authors: M. Chang, <b>Y. Wang</b>, H. Wang, Y. Zhou, A. Bulling, C. Xiong
         conference: "IEEE International Conference on Visualisation (VIS), 2025"
 
-      - title: "Grid Labeling: Crowdsourcing Task-Specific Importance from Visualizations"
-        link: "https://collaborative-ai.org/publications/chang25_eurovis/"
-        authors: M. Chang, <b>Y. Wang</b>, H. Wang, A. Bulling, C. Xiong
-        conference: "The Eurographics Association (EuroVIS), 2025"
-
       - title: "Chartist: Task-driven Eye Movement Control for Chart Reading"
         link: "https://collaborative-ai.org/publications/shi25_chi/"
         authors: D. Shi, <b>Y. Wang</b>, Y. Bai, A. Bulling, A. Oulasvirta
@@ -129,11 +119,6 @@ publications:
         link: "https://collaborative-ai.org/publications/wang24_etra/"
         authors: <b>Y. Wang</b>, Y. Jiang, Z. Hu, C. Ruhdorfer, M. Bâce, A. Bulling
         conference: "Proc. ACM on Human-Computer Interaction (PACM HCI), pp. 1-18, 2024"
-
-      - title: "Saliency3D: A 3D Saliency Dataset Collected on Screen"
-        link: "https://collaborative-ai.org/publications/wang24_etras/"
-        authors: <b>Y. Wang§</b>, Q. Dai§, M. Bâce, K. Klein, A. Bulling
-        conference: "2024 Symposium on Eye Tracking Research and Applications (ETRA), No. 18, pp. 1-9, 2024"
 
       - title: "SalChartQA: Question-driven Saliency on Information Visualisations"
         link: "https://collaborative-ai.org/publications/wang24_chi/"
