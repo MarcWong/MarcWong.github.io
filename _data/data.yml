@@ -9,7 +9,7 @@ sidebar:
 
     # Profile information
     name: Yao Wang
-    tagline: Postdoc Researcher
+    tagline: Postdoctoral Researcher
     avatar: profile.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
     # Sidebar links
@@ -29,7 +29,7 @@ sidebar:
     stack-overflow: # Number/Username, e.g. 123456/alandoe
     codewars:
     goodreads: # Number-Username, e.g. 123456-alandoe
-    pdf: Curriculum_Vitae.pdf
+    pdf: Curriculum_Vitae_Yao_Wang.pdf
 
     languages:
       title: Languages
@@ -56,7 +56,7 @@ sidebar:
 career-profile:
     title: Career Profile
     summary: |
-       I am a Postdoctoral researcher at the University of Stuttgart. I did my PhD during September 2020 - November 2024. I am open to research-related positions in both industry and acedemic fields.
+       I am a Postdoctoral researcher at the University of Stuttgart. I did my PhD during September 2020 - November 2024. I am open to research-related positions in both industry and academic fields.
 education:
     title: Education
     info:
@@ -105,16 +105,6 @@ publications:
         authors: L. Zhang§, <b>Y. Wang§</b>, Y. Zhang, W. Kerle-Malcharek, K. Klein, F. Schreiber, A. Bulling
         conference: "The 33rd International Symposium on Graph Drawing and Network Visualization (GD), 2025"
 
-      - title: "Tell Me Without Telling Me: Two-Way Prediction of Visualization Literacy and Visual Attention"
-        link: "https://collaborative-ai.org/publications/chang25_vis/"
-        authors: M. Chang, <b>Y. Wang</b>, H. Wang, Y. Zhou, A. Bulling, C. Xiong
-        conference: "IEEE International Conference on Visualisation (VIS), 2025"
-
-      - title: "Chartist: Task-driven Eye Movement Control for Chart Reading"
-        link: "https://collaborative-ai.org/publications/shi25_chi/"
-        authors: D. Shi, <b>Y. Wang</b>, Y. Bai, A. Bulling, A. Oulasvirta
-        conference: "Proc. ACM SIGCHI Conference on Human Factors in Computing Systems (CHI), pp. 1-14, 2025"
-
       - title: "VisRecall++: Analysing and Predicting Recallability of Information Visualisations from Gaze Behaviour"
         link: "https://collaborative-ai.org/publications/wang24_etra/"
         authors: <b>Y. Wang</b>, Y. Jiang, Z. Hu, C. Ruhdorfer, M. Bâce, A. Bulling
@@ -129,11 +119,6 @@ publications:
         link: "https://collaborative-ai.org/publications/wang23_tvcg/"
         authors: <b>Y. Wang</b>, M. Bâce, A. Bulling
         conference: "IEEE Transactions on Visualization and Computer Graphics (TVCG), vol. 30, no. 7, pp. 3902-3914, 6 Feb. 2023"
-
-      - title: "VisRecall: Quantifying Information Visualisation Recallability via Question Answering"
-        link: "https://collaborative-ai.org/publications/wang22_tvcg/"
-        authors: <b>Y. Wang</b>, C. Jiao, M. Bâce, A. Bulling
-        conference: "IEEE Transactions on Visualization and Computer Graphics (TVCG), vol. 28, no. 12, pp. 4995-5005, 1 Dec. 2022"
 
       - title: Impact of Gaze Uncertainty on AOIs in Information Visualisations
         link: "https://collaborative-ai.org/publications/wang22_etvis/"
