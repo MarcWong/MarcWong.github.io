@@ -11,7 +11,7 @@ layout: default
 
 {% include experiences.html %}
 
-<!-- 
+<!--
 {% include certifications.html %}
 
 {% include projects.html %}
@@ -20,7 +20,16 @@ layout: default
 
 {% include publications.html %}
 
-{% include updates.html %}
+<section class="section memories-teaser-section">
+  <h2 class="section-title">
+    <span class="fa-stack fa-xs">
+      <i class="fas fa-circle fa-stack-2x"></i>
+      <i class="fas fa-camera fa-stack-1x fa-inverse"></i>
+    </span>
+    Memories
+  </h2>
+  <p>Snapshots from conferences, research stays, and life outside the lab.</p>
+  <a class="memories-link" href="{{ '/memories/' | relative_url }}">Browse Memories &rarr;</a>
+</section>
 
 {% include skills.html %}
-

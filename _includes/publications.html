@@ -17,15 +17,40 @@
   {% endif %}
 
   {% for publication in publications.papers %}
-  <div class="item">
-    {% if publication.link %}
-      <li><a href="{{ publication.link }}">{{ publication.title }}</a></li>
+  <div class="publication-card">
+    {% if publication.teaser %}
+    <div class="publication-teaser">
+      {% if publication.link %}
+      <a href="{{ publication.link }}" target="_blank" rel="noopener">
+        <img src="{{ site.baseurl }}{{ publication.teaser }}" alt="{{ publication.title | escape }}" />
+      </a>
+      {% else %}
+      <img src="{{ site.baseurl }}{{ publication.teaser }}" alt="{{ publication.title | escape }}" />
+      {% endif %}
+    </div>
     {% else %}
-      <li>{{ publication.title }}</li>
+    <div class="publication-teaser publication-teaser-placeholder" aria-hidden="true">
+      <i class="fas fa-file-alt"></i>
+    </div>
     {% endif %}
-    <div class="publication-authors">{{ publication.authors }}</div>
-    <div class="publication-conference">{{ publication.conference }}</div>
-  </div><!--//item-->
+
+    <div class="publication-body">
+      <h3 class="publication-title">
+        {% if publication.link %}
+          <a href="{{ publication.link }}" target="_blank" rel="noopener">{{ publication.title }}</a>
+        {% else %}
+          {{ publication.title }}
+        {% endif %}
+      </h3>
+      <div class="publication-authors">{{ publication.authors }}</div>
+      <div class="publication-meta">
+        {% if publication.venue %}
+        <span class="publication-venue">{{ publication.venue }}</span>
+        {% endif %}
+        <span class="publication-conference">{{ publication.conference }}</span>
+      </div>
+    </div>
+  </div><!--//publication-card-->
   {% endfor %}
 
 </section><!--//section-->

@@ -1,0 +1,29 @@
+{% assign memories = site.data.data.memories %}
+{% if memories %}
+<section class="section summary-section">
+
+  <h2 class="section-title">
+    <span class="fa-stack fa-xs">
+      <i class="fas fa-circle fa-stack-2x"></i>
+      <i class="fas fa-camera fa-stack-1x fa-inverse"></i>
+    </span>
+    {{ memories.title }}
+  </h2>
+
+  {% if memories.intro %}
+  <div class="intro">
+    {{ memories.intro | markdownify }}
+  </div>
+  {% endif %}
+
+  <div class="memories-gallery">
+    {% for image in memories.images %}
+    <figure class="memory-card">
+      <img src="{{ site.baseurl }}{{ image.name }}" alt="{{ image.desp | escape }}" loading="lazy" />
+      <figcaption class="memory-desp">{{ image.desp }}</figcaption>
+    </figure>
+    {% endfor %}
+  </div>
+
+</section><!--//section-->
+{% endif %}
