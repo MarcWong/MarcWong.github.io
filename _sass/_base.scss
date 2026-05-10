@@ -157,6 +157,42 @@ p {
       }
     }
   }
+
+  .skills-container {
+    .container-block-title {
+      margin-top: 0;
+      margin-bottom: 12px;
+      &:not(:first-child) {
+        margin-top: 22px;
+      }
+    }
+  }
+  .sidebar-skillset {
+    margin-bottom: 0;
+    li {
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .sidebar-skill-name {
+      font-size: 13px;
+      color: #fff;
+      margin-bottom: 4px;
+      line-height: 1.3;
+    }
+    .sidebar-skill-bar {
+      height: 6px;
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .sidebar-skill-bar-inner {
+      height: 6px;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 3px;
+    }
+  }
 }
 
 .main-wrapper {
@@ -356,6 +392,17 @@ p {
       flex: 0 0 auto;
       width: 100%;
       height: 140px;
+    }
+  }
+
+  .visitors-widget {
+    text-align: center;
+    img,
+    iframe,
+    canvas,
+    svg {
+      max-width: 100%;
+      height: auto;
     }
   }
 

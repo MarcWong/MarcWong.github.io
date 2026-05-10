@@ -54,9 +54,9 @@ sidebar:
 
 
 career-profile:
-    title: Career Profile
+    title: About Me
     summary: |
-       I am a Postdoctoral researcher at the University of Stuttgart. I did my PhD during September 2020 - November 2024. I am open to research-related positions in both industry and academic fields.
+       I am a Postdoctoral researcher at the University of Stuttgart. I did my PhD supervised by <a href="https://collaborative-ai.org/people/bulling/">Prof. Dr. Andreas Bulling</a>. I was a visiting PhD student at the Aalto University in Prof. Antti Oulasvirta's group in 2023. 
 education:
     title: Education
     info:
@@ -79,15 +79,15 @@ education:
         details: |
             - GPA: 3.34 / 4.0
             - key courses: Data Structures and Algorithms, Algorithm Design and Analysis, Introduction to Computer Systems, Introduction to Pattern Recognition, Digital Image Processing, Set and Graph Theory, Web Software Technology
-experiences:
-    title: Experiences
-    info:
-      - role: PhD Student
-        time: 2020 - 2024
-        company: University of Stuttgart
-        details: |
-          My PhD topic is visual attention modelling for optimization of information visualizations, which integrated to Project A07 in <a href="https://www.sfbtrr161.de/research/project_a07/">SFB-TRR 161</a>.
-          My first research goal is acquiring large-scale humanlike attention data without eye tracking equipment on information visualizations. I turn to crowdsourcing approaches (webcam or mouse-clicking) or gaze data synthesis by generative or cognitive models. My second research goal is to computationally model human visual behaviour (saliency map, scanpath) under different tasks (top-down) in information visualizations. My third research goal is to optimize information visualisation design by maximising perceptual metrics.
+# experiences:
+#     title: Experiences
+#     info:
+#       - role: PhD Student
+#         time: 2020 - 2024
+#         company: University of Stuttgart
+#         details: |
+#           My PhD topic is visual attention modelling for optimization of information visualizations, which integrated to Project A07 in <a href="https://www.sfbtrr161.de/research/project_a07/">SFB-TRR 161</a>.
+#           My first research goal is acquiring large-scale humanlike attention data without eye tracking equipment on information visualizations. I turn to crowdsourcing approaches (webcam or mouse-clicking) or gaze data synthesis by generative or cognitive models. My second research goal is to computationally model human visual behaviour (saliency map, scanpath) under different tasks (top-down) in information visualizations. My third research goal is to optimize information visualisation design by maximising perceptual metrics.
 
 publications:
     title: Selected Publications
@@ -169,33 +169,27 @@ skills:
         level: 90%
 
       - name: Human Computer Interaction
-        level: 85%
+        level: 88%
 
       - name: VR/AR
-        level: 80%
+        level: 85%
 
       - name: Natural Language Processing
-        level: 70%
+        level: 75%
 
 
     toolset:
-      - name: Python (PyTorch, Keras, Pandas, Django...)
-        level: 98%
+      - name: Python
+        level: 99%
 
-      - name: Javascript (Vue.js), CSS, HTML
-        level: 90%
-
-      - name: Git
-        level: 85%
+      - name: Javascript, CSS, HTML
+        level: 95%
 
       - name: Matlab
         level: 75%
 
       - name: C++
         level: 70%
-
-      - name: Bash
-        level: 60%
 
       - name: Java
         level: 60%

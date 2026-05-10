@@ -64,6 +64,49 @@ bundle exec jekyll serve
 * Navigate to `http://localhost:4000`
 
 
+## Updating Google Scholar citation counts
+
+Each entry under `publications.papers` in `_data/data.yml` carries a
+`citations:` field. When the value is `> 10`, `_includes/publications.html`
+renders a small "Cited by N" badge linking to the Scholar profile defined by
+`publications.scholar_url`.
+
+Google Scholar has no public API, so the workflow is **scrape → eyeball → paste**:
+
+```bash
+# Uses the Scholar user id from _data/data.yml by default
+python3 scripts/fetch_scholar_citations.py
+
+# Or pass another profile's id explicitly
+python3 scripts/fetch_scholar_citations.py X8je0QsAAAAJ
+```
+
+The script prints the full publication list with citation counts and marks
+the rows that qualify for the badge:
+
+```
+Cites  Year  Title
+----------------------------------------------------------------------
+  123 *2018  Large-scale Structure from Motion with Semantic Constraints ...
+   41 *2023  Scanpath Prediction on Information Visualisations
+   25 *2024  SalChartQA: Question-driven Saliency on Information ...
+   ...
+* = qualifies for the citation badge (citations > 10).
+```
+
+Copy the numbers into the matching `citations:` lines in
+`_data/data.yml`. Titles in Scholar may differ slightly from the ones in
+`data.yml`, so match by eye rather than by string equality.
+
+**Caveats**
+
+- Scholar rate-limits and serves a CAPTCHA after repeated scrapes — run
+  sparingly (e.g. once a month) and from a residential IP.
+- The script never edits `data.yml` for you; that step is manual on
+  purpose so a flaky scrape can't corrupt the data.
+- Set `publications.scholar_url` in `_data/data.yml` to the profile the
+  badge should link to.
+
 ## Skins
 
 There are 6 color schemes available:
