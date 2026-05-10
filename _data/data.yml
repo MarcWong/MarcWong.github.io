@@ -107,7 +107,7 @@ publications:
       - title: "Towards a Better Understanding of Graph Perception in Immersive Environments"
         link: "https://collaborative-ai.org/publications/zhang25_gd/"
         authors: L. Zhang§, <b>Y. Wang§</b>, Y. Zhang, W. Kerle-Malcharek, K. Klein, F. Schreiber, A. Bulling
-        conference: "The 33rd International Symposium on Graph Drawing and Network Visualization (GD), 2025"
+        conference: "33rd International Symposium on Graph Drawing and Network Visualization"
         venue: "GD 2025"
         teaser: /assets/images/publications/zhang25_gd.png
         citations: 0
@@ -115,15 +115,15 @@ publications:
       - title: "VisRecall++: Analysing and Predicting Recallability of Information Visualisations from Gaze Behaviour"
         link: "https://collaborative-ai.org/publications/wang24_etra/"
         authors: <b>Y. Wang</b>, Y. Jiang, Z. Hu, C. Ruhdorfer, M. Bâce, A. Bulling
-        conference: "Proc. ACM on Human-Computer Interaction (PACM HCI), pp. 1-18, 2024"
-        venue: "PACM HCI 2024"
+        conference: "Proc. ACM on Human-Computer Interaction, Volume 8, Issue ETRA, 2024"
+        venue: "PACM HCI"
         teaser: /assets/images/publications/wang24_etra.png
         citations: 18
 
       - title: "SalChartQA: Question-driven Saliency on Information Visualisations"
         link: "https://collaborative-ai.org/publications/wang24_chi/"
         authors: <b>Y. Wang</b>, W. Wang, A. Abdelhafez, M. Elfares, Z. Hu, M. Bâce, A. Bulling
-        conference: "Proc. ACM SIGCHI Conference on Human Factors in Computing Systems (CHI), pp. 1-14, 2024"
+        conference: "ACM SIGCHI Conference on Human Factors in Computing Systems"
         venue: "CHI 2024"
         teaser: /assets/images/publications/wang24_chi.png
         citations: 25
@@ -131,15 +131,15 @@ publications:
       - title: "Scanpath Prediction on Information Visualisations"
         link: "https://collaborative-ai.org/publications/wang23_tvcg/"
         authors: <b>Y. Wang</b>, M. Bâce, A. Bulling
-        conference: "IEEE Transactions on Visualization and Computer Graphics (TVCG), vol. 30, no. 7, pp. 3902-3914, 6 Feb. 2023"
-        venue: "IEEE TVCG 2023"
+        conference: "IEEE Transactions on Visualization and Computer Graphics, Volume 30, Issue 7, 2023"
+        venue: "TVCG"
         teaser: /assets/images/publications/wang23_tvcg.png
         citations: 41
 
       - title: Impact of Gaze Uncertainty on AOIs in Information Visualisations
         link: "https://collaborative-ai.org/publications/wang22_etvis/"
         authors: <b>Y. Wang§</b>, M. Koch§, M. Bâce, D. Weiskopf, A. Bulling
-        conference: "2022 Symposium on Eye Tracking Research and Applications (ETRA), No. 60, pp. 1-6, 2022"
+        conference: "2022 Symposium on Eye Tracking Research and Applications"
         venue: "ETRA 2022"
         teaser: /assets/images/publications/wang22_etvis.png
         citations: 14
@@ -147,8 +147,9 @@ publications:
       - title: Large-scale Structure from Motion with Semantic Constraints of Aerial Images
         link: "https://link.springer.com/chapter/10.1007/978-3-030-03398-9_30"
         authors: Y. Chen§, <b>Y. Wang§</b>, P. Lu, Y. Chen, G. Wang
-        conference: "Chinese Conference on Pattern Recognition and Computer Vision (PRCV), 2018: 347-359"
+        conference: "Chinese Conference on Pattern Recognition and Computer Vision"
         venue: "PRCV 2018"
+        teaser: /assets/images/publications/wang18_prcv.png
         citations: 123
 
 skills:
