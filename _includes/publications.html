@@ -47,6 +47,15 @@
         {% if publication.venue %}
         <span class="publication-venue">{{ publication.venue }}</span>
         {% endif %}
+        {% if publication.citations and publication.citations > 10 %}
+        <a class="publication-citations"
+           href="{{ publications.scholar_url | default: 'https://scholar.google.com/' }}"
+           target="_blank" rel="noopener"
+           title="Cited by {{ publication.citations }} (Google Scholar)">
+          <i class="fas fa-quote-right" aria-hidden="true"></i>
+          <span>Cited by {{ publication.citations }}</span>
+        </a>
+        {% endif %}
         <span class="publication-conference">{{ publication.conference }}</span>
       </div>
     </div>
