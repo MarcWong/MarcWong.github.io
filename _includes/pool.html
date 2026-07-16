@@ -1,0 +1,377 @@
+{% assign pool = site.data.pool %}
+{% assign player = pool.player %}
+{% assign matches = pool.matches %}
+{% assign total = matches.size %}
+
+{% assign win_matches = matches | where: "result", "W" %}
+{% assign win_count = win_matches.size %}
+{% assign loss_count = total | minus: win_count %}
+{% assign win_pct = win_count | times: 100.0 | divided_by: total %}
+
+{% assign m8 = matches | where: "discipline", "8-Ball" %}
+{% assign m9 = matches | where: "discipline", "9-Ball" %}
+{% assign m10 = matches | where: "discipline", "10-Ball" %}
+{% assign m141 = matches | where: "discipline", "14/1" %}
+
+{% assign m8_total = m8.size %}
+{% assign m9_total = m9.size %}
+{% assign m10_total = m10.size %}
+{% assign m141_total = m141.size %}
+
+{% assign m8_win_count = m8 | where: "result", "W" | size %}
+{% assign m9_win_count = m9 | where: "result", "W" | size %}
+{% assign m10_win_count = m10 | where: "result", "W" | size %}
+{% assign m141_win_count = m141 | where: "result", "W" | size %}
+
+{% assign m8_pct = m8_win_count | times: 100.0 | divided_by: m8_total %}
+{% assign m9_pct = m9_win_count | times: 100.0 | divided_by: m9_total %}
+{% assign m10_pct = m10_win_count | times: 100.0 | divided_by: m10_total %}
+{% assign m141_pct = m141_win_count | times: 100.0 | divided_by: m141_total %}
+
+<!-- Win-loss differential trend: cumulative (W=+1, L=-1) across matches, oldest to newest -->
+{% assign chronological = matches | reverse %}
+{% assign running = 0 %}
+{% assign min_diff = 0 %}
+{% assign max_diff = 0 %}
+{% for m in chronological %}
+  {% if m.result == 'W' %}
+    {% assign running = running | plus: 1 %}
+  {% else %}
+    {% assign running = running | minus: 1 %}
+  {% endif %}
+  {% if running < min_diff %}{% assign min_diff = running %}{% endif %}
+  {% if running > max_diff %}{% assign max_diff = running %}{% endif %}
+{% endfor %}
+{% assign final_diff = running %}
+
+{% assign domain_min = -1 %}
+{% assign domain_max = 1 %}
+{% if min_diff < 0 %}{% assign domain_min = min_diff | minus: 1 %}{% endif %}
+{% if max_diff > 0 %}{% assign domain_max = max_diff | plus: 1 %}{% endif %}
+{% assign domain_range = domain_max | minus: domain_min %}
+
+<!-- pick a "nice" gridline step so the y-axis doesn't get too dense as history grows -->
+{% if domain_range <= 12 %}
+  {% assign grid_step = 2 %}
+{% elsif domain_range <= 30 %}
+  {% assign grid_step = 5 %}
+{% elsif domain_range <= 60 %}
+  {% assign grid_step = 10 %}
+{% else %}
+  {% assign grid_step = 20 %}
+{% endif %}
+
+{% assign trend_left = 42.0 %}
+{% assign trend_right = 526.0 %}
+{% assign trend_top = 36.0 %}
+{% assign trend_bottom = 194.0 %}
+{% assign trend_plot_w = trend_right | minus: trend_left %}
+{% assign trend_plot_h = trend_bottom | minus: trend_top %}
+{% assign total_minus_1 = total | minus: 1 %}
+{% assign season_label_y = trend_top | minus: 14 %}
+
+{% assign zero_frac = domain_max | times: 1.0 | divided_by: domain_range %}
+{% assign zero_y = zero_frac | times: trend_plot_h | plus: trend_top | round: 2 %}
+
+{% assign trend_points = "" %}
+{% assign running_pt = 0 %}
+{% assign prev_season_label = "" %}
+{% assign season_start_px = 0 %}
+{% assign prev_px = 0 %}
+{% capture season_markup %}{% for m in chronological %}
+  {% assign idx0 = forloop.index0 %}
+  {% if m.result == 'W' %}
+    {% assign running_pt = running_pt | plus: 1 %}
+  {% else %}
+    {% assign running_pt = running_pt | minus: 1 %}
+  {% endif %}
+  {% assign x_frac = idx0 | times: 1.0 | divided_by: total_minus_1 %}
+  {% assign px = x_frac | times: trend_plot_w | plus: trend_left | round: 2 %}
+  {% assign v_from_max = domain_max | minus: running_pt %}
+  {% assign y_frac = v_from_max | times: 1.0 | divided_by: domain_range %}
+  {% assign py = y_frac | times: trend_plot_h | plus: trend_top | round: 2 %}
+  {% assign trend_points = trend_points | append: px | append: "," | append: py | append: " " %}
+
+  <!-- a season runs September through June the following year -->
+  {% assign m_year = m.date | date: "%Y" | plus: 0 %}
+  {% assign m_month = m.date | date: "%m" | plus: 0 %}
+  {% if m_month >= 9 %}
+    {% assign season_start_year = m_year %}
+  {% else %}
+    {% assign season_start_year = m_year | minus: 1 %}
+  {% endif %}
+  {% assign season_end_year = season_start_year | plus: 1 %}
+  {% assign season_label = season_start_year | append: '/' | append: season_end_year %}
+
+  {% if forloop.first %}
+    {% assign prev_season_label = season_label %}
+    {% assign season_start_px = px %}
+  {% elsif season_label != prev_season_label %}
+    {% assign boundary_x = prev_px | plus: px | divided_by: 2.0 | round: 2 %}
+    {% assign label_x = season_start_px | plus: boundary_x | divided_by: 2.0 | round: 2 %}
+<line x1="{{ boundary_x }}" y1="{{ trend_top }}" x2="{{ boundary_x }}" y2="{{ trend_bottom }}" stroke="#898781" stroke-width="2.5"/>
+<text x="{{ label_x }}" y="{{ season_label_y }}" text-anchor="middle" font-size="11" font-weight="600" fill="#3F4650">{{ prev_season_label }}</text>
+    {% assign season_start_px = boundary_x %}
+    {% assign prev_season_label = season_label %}
+  {% endif %}
+
+  {% if forloop.last %}
+    {% assign last_px = px %}
+    {% assign last_py = py %}
+<text x="{{ season_start_px | plus: px | divided_by: 2.0 | round: 2 }}" y="{{ season_label_y }}" text-anchor="middle" font-size="11" font-weight="600" fill="#3F4650">{{ prev_season_label }}</text>
+  {% endif %}
+
+  {% assign prev_px = px %}
+{% endfor %}{% endcapture %}
+
+{% if final_diff < 0 %}
+  {% assign endpoint_color = "#d03b3b" %}
+{% elsif final_diff > 0 %}
+  {% assign endpoint_color = "#0ca30c" %}
+{% else %}
+  {% assign endpoint_color = "#898781" %}
+{% endif %}
+
+<!-- Radar geometry: 4 axes at cardinal points around center (170,170), radius 92 -->
+{% assign cx = 170.0 %}
+{% assign cy = 170.0 %}
+{% assign maxR = 92.0 %}
+{% assign r8 = m8_pct | times: maxR | divided_by: 100 %}
+{% assign r9 = m9_pct | times: maxR | divided_by: 100 %}
+{% assign r10 = m10_pct | times: maxR | divided_by: 100 %}
+{% assign r141 = m141_pct | times: maxR | divided_by: 100 %}
+{% assign p8y = cy | minus: r8 %}
+{% assign p9x = cx | plus: r9 %}
+{% assign p10y = cy | plus: r10 %}
+{% assign p141x = cx | minus: r141 %}
+
+<section class="section pool-section">
+
+  <h2 class="section-title">
+    <span class="fa-stack fa-xs">
+      <i class="fas fa-circle fa-stack-2x"></i>
+      <i class="fas fa-bowling-ball fa-stack-1x fa-inverse"></i>
+    </span>
+    Pool / Billiard
+  </h2>
+
+  <div class="pool-header">
+    {% if player.photo %}
+    <img class="pool-photo" src="{{ site.baseurl }}{{ player.photo }}" alt="{{ player.name }} playing pool" loading="lazy" />
+    {% endif %}
+    <div class="pool-intro">
+      <div class="intro">{{ player.intro | markdownify }}</div>
+      <div class="pool-meta">
+        <span><strong>Club:</strong> {{ player.club }} ({{ player.club_id }})</span>
+        <span><strong>Pass-Nr.:</strong> {{ player.pass_number }}</span>
+        <span><strong>DBU-Nr.:</strong> {{ player.dbu_number }}</span>
+      </div>
+      <a class="pool-source-link" href="{{ player.profile_url }}" target="_blank" rel="noreferrer noopener">
+        View official {{ player.federation }} profile &rarr;
+      </a>
+    </div>
+  </div><!--//pool-header-->
+
+  <div class="stat-tiles">
+    <div class="stat-tile">
+      <div class="stat-tile-value">{{ total }}</div>
+      <div class="stat-tile-label">Matches</div>
+    </div>
+    <div class="stat-tile">
+      <div class="stat-tile-value">{{ win_count }}</div>
+      <div class="stat-tile-label">Wins</div>
+    </div>
+    <div class="stat-tile">
+      <div class="stat-tile-value">{{ loss_count }}</div>
+      <div class="stat-tile-label">Losses</div>
+    </div>
+    <div class="stat-tile">
+      <div class="stat-tile-value">{{ win_pct | round: 0 }}%</div>
+      <div class="stat-tile-label">Win Rate</div>
+    </div>
+  </div><!--//stat-tiles-->
+
+  <div class="pool-chart-card pool-chart-card-wide">
+    <h3 class="pool-chart-title">Win-Loss Differential</h3>
+    <svg class="pool-chart-svg" viewBox="0 0 560 240" width="560" height="240" role="img" aria-label="Cumulative win-loss differential across {{ total }} matches, oldest to newest, currently {{ final_diff }}">
+      <!-- horizontal gridlines at multiples of grid_step (0 is drawn separately below) -->
+      {% for i in (0..30) %}
+        {% assign pos_val = i | times: grid_step %}
+        {% assign neg_val = pos_val | times: -1 %}
+        {% if pos_val > 0 and pos_val <= domain_max and pos_val >= domain_min %}
+          {% assign gv_frac = domain_max | minus: pos_val | times: 1.0 | divided_by: domain_range %}
+          {% assign gv_y = gv_frac | times: trend_plot_h | plus: trend_top | round: 2 %}
+      <line x1="{{ trend_left }}" y1="{{ gv_y }}" x2="{{ trend_right }}" y2="{{ gv_y }}" stroke="#e1e0d9" stroke-width="1"/>
+      <text x="{{ trend_left | minus: 8 }}" y="{{ gv_y | plus: 4 }}" text-anchor="end" font-size="9" fill="#898781">{{ pos_val }}</text>
+        {% endif %}
+        {% if neg_val < 0 and neg_val <= domain_max and neg_val >= domain_min %}
+          {% assign gv_frac = domain_max | minus: neg_val | times: 1.0 | divided_by: domain_range %}
+          {% assign gv_y = gv_frac | times: trend_plot_h | plus: trend_top | round: 2 %}
+      <line x1="{{ trend_left }}" y1="{{ gv_y }}" x2="{{ trend_right }}" y2="{{ gv_y }}" stroke="#e1e0d9" stroke-width="1"/>
+      <text x="{{ trend_left | minus: 8 }}" y="{{ gv_y | plus: 4 }}" text-anchor="end" font-size="9" fill="#898781">{{ neg_val }}</text>
+        {% endif %}
+      {% endfor %}
+
+      <!-- zero baseline (drawn on top of the regular grid, more prominent) -->
+      <line x1="{{ trend_left }}" y1="{{ zero_y }}" x2="{{ trend_right }}" y2="{{ zero_y }}" stroke="#c3c2b7" stroke-width="1.5"/>
+      <text x="{{ trend_left | minus: 8 }}" y="{{ zero_y | plus: 4 }}" text-anchor="end" font-size="11" fill="#898781">0</text>
+
+      <!-- axis frame -->
+      <line x1="{{ trend_left }}" y1="{{ trend_top }}" x2="{{ trend_left }}" y2="{{ trend_bottom }}" stroke="#c3c2b7" stroke-width="1.5"/>
+      <line x1="{{ trend_left }}" y1="{{ trend_bottom }}" x2="{{ trend_right }}" y2="{{ trend_bottom }}" stroke="#c3c2b7" stroke-width="1.5"/>
+
+      <!-- season boundaries + labels (season = September through June the following year) -->
+      {{ season_markup }}
+
+      <!-- trend line -->
+      <polyline points="{{ trend_points }}" fill="none" stroke="#3a8a7e" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+
+      <!-- endpoint marker + current value -->
+      <circle cx="{{ last_px }}" cy="{{ last_py }}" r="4.5" fill="{{ endpoint_color }}"/>
+      <text x="{{ last_px | plus: 8 }}" y="{{ last_py | plus: 4 }}" font-size="13" font-weight="700" fill="{{ endpoint_color }}">{{ final_diff }}</text>
+
+      <!-- x-axis endpoints -->
+      <text x="{{ trend_left }}" y="{{ trend_bottom | plus: 18 }}" text-anchor="start" font-size="10" fill="#898781">Game 1</text>
+      <text x="{{ trend_right }}" y="{{ trend_bottom | plus: 18 }}" text-anchor="end" font-size="10" fill="#898781">Game {{ total }}</text>
+    </svg>
+    <p class="pool-chart-caption">Running total of wins minus losses, oldest match to newest. Currently <strong style="color: {{ endpoint_color }}">{{ final_diff }}</strong> ({{ win_count }}W&ndash;{{ loss_count }}L).</p>
+  </div><!--//pool-chart-card-->
+
+  <div class="pool-charts-row">
+
+    <div class="pool-chart-card">
+      <h3 class="pool-chart-title">Win Rate by Discipline</h3>
+      <svg class="pool-chart-svg" viewBox="0 0 340 340" width="340" height="300" role="img" aria-label="Win rate by discipline: 8-Ball {{ m8_pct | round: 0 }}%, 9-Ball {{ m9_pct | round: 0 }}%, 10-Ball {{ m10_pct | round: 0 }}%, 14/1 {{ m141_pct | round: 0 }}%">
+        <!-- grid rings (25/50/75/100%) -->
+        <polygon points="170,147 193,170 170,193 147,170" fill="none" stroke="#e1e0d9"/>
+        <polygon points="170,124 216,170 170,216 124,170" fill="none" stroke="#e1e0d9"/>
+        <polygon points="170,101 239,170 170,239 101,170" fill="none" stroke="#e1e0d9"/>
+        <polygon points="170,78 262,170 170,262 78,170" fill="none" stroke="#e1e0d9"/>
+        <!-- spokes -->
+        <line x1="170" y1="170" x2="170" y2="78" stroke="#e1e0d9"/>
+        <line x1="170" y1="170" x2="262" y2="170" stroke="#e1e0d9"/>
+        <line x1="170" y1="170" x2="170" y2="262" stroke="#e1e0d9"/>
+        <line x1="170" y1="170" x2="78" y2="170" stroke="#e1e0d9"/>
+        <!-- scale ticks along top spoke -->
+        <text x="176" y="150" font-size="8" fill="#898781">25</text>
+        <text x="176" y="127" font-size="8" fill="#898781">50</text>
+        <text x="176" y="104" font-size="8" fill="#898781">75</text>
+        <text x="176" y="81" font-size="8" fill="#898781">100</text>
+        <!-- data polygon -->
+        <polygon points="170,{{ p8y }} {{ p9x }},170 170,{{ p10y }} {{ p141x }},170"
+                 fill="#3a8a7e" fill-opacity="0.25" stroke="#3a8a7e" stroke-width="2"/>
+        <circle cx="170" cy="{{ p8y }}" r="4" fill="#3a8a7e"/>
+        <circle cx="{{ p9x }}" cy="170" r="4" fill="#3a8a7e"/>
+        <circle cx="170" cy="{{ p10y }}" r="4" fill="#3a8a7e"/>
+        <circle cx="{{ p141x }}" cy="170" r="4" fill="#3a8a7e"/>
+        <!-- axis labels: name + win rate -->
+        <text x="170" y="46" text-anchor="middle" font-size="12" font-weight="600" fill="#3F4650">8-Ball</text>
+        <text x="170" y="61" text-anchor="middle" font-size="11" fill="#898781">{{ m8_pct | round: 0 }}%</text>
+
+        <text x="270" y="166" text-anchor="start" font-size="12" font-weight="600" fill="#3F4650">9-Ball</text>
+        <text x="270" y="181" text-anchor="start" font-size="11" fill="#898781">{{ m9_pct | round: 0 }}%</text>
+
+        <text x="170" y="282" text-anchor="middle" font-size="12" font-weight="600" fill="#3F4650">10-Ball</text>
+        <text x="170" y="297" text-anchor="middle" font-size="11" fill="#898781">{{ m10_pct | round: 0 }}%</text>
+
+        <text x="70" y="166" text-anchor="end" font-size="12" font-weight="600" fill="#3F4650">14/1</text>
+        <text x="70" y="181" text-anchor="end" font-size="11" fill="#898781">{{ m141_pct | round: 0 }}%</text>
+      </svg>
+    </div><!--//pool-chart-card-->
+
+  </div><!--//pool-charts-row-->
+
+  <div class="pool-table-wrap">
+    <table class="pool-table discipline-table">
+      <thead>
+        <tr>
+          <th>Discipline</th>
+          <th>Played</th>
+          <th>Won</th>
+          <th>Lost</th>
+          <th>Win %</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>8-Ball</td>
+          <td>{{ m8_total }}</td>
+          <td>{{ m8_win_count }}</td>
+          <td>{{ m8_total | minus: m8_win_count }}</td>
+          <td>{{ m8_pct | round: 0 }}%</td>
+        </tr>
+        <tr>
+          <td>9-Ball</td>
+          <td>{{ m9_total }}</td>
+          <td>{{ m9_win_count }}</td>
+          <td>{{ m9_total | minus: m9_win_count }}</td>
+          <td>{{ m9_pct | round: 0 }}%</td>
+        </tr>
+        <tr>
+          <td>10-Ball</td>
+          <td>{{ m10_total }}</td>
+          <td>{{ m10_win_count }}</td>
+          <td>{{ m10_total | minus: m10_win_count }}</td>
+          <td>{{ m10_pct | round: 0 }}%</td>
+        </tr>
+        <tr>
+          <td>14/1 <span class="text-muted">(Straight Pool)</span></td>
+          <td>{{ m141_total }}</td>
+          <td>{{ m141_win_count }}</td>
+          <td>{{ m141_total | minus: m141_win_count }}</td>
+          <td>{{ m141_pct | round: 0 }}%</td>
+        </tr>
+        <tr class="total-row">
+          <td>Total</td>
+          <td>{{ total }}</td>
+          <td>{{ win_count }}</td>
+          <td>{{ loss_count }}</td>
+          <td>{{ win_pct | round: 0 }}%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div><!--//pool-table-wrap-->
+
+  <h3 class="pool-chart-title">Match History <span class="text-muted">({{ total }} matches, score shown as mine&ndash;opponent's)</span></h3>
+  <div class="pool-table-wrap">
+    <table class="pool-table match-table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Opponent</th>
+          <th>Team</th>
+          <th>Discipline</th>
+          <th>League</th>
+          <th>Score</th>
+          <th>Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for m in matches %}
+        <tr>
+          <td>{{ m.date | date: "%d %b %Y" }}</td>
+          <td>{{ m.opponent }}</td>
+          <td>{{ m.team }}</td>
+          <td>{{ m.discipline }}</td>
+          <td>
+            {% if m.league == 'Bezirksliga' %}
+            <span class="badge badge-league-bezirk">{{ m.league }}</span>
+            {% else %}
+            <span class="badge badge-league-kreis">{{ m.league }}</span>
+            {% endif %}
+          </td>
+          <td class="score-cell">{{ m.score }}</td>
+          <td>
+            {% if m.result == 'W' %}
+            <span class="badge badge-win">W</span>
+            {% else %}
+            <span class="badge badge-loss">L</span>
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div><!--//pool-table-wrap-->
+
+</section><!--//pool-section-->

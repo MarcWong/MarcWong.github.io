@@ -47,7 +47,7 @@ sidebar:
       title: Interests
       info:
         - item: Billiard Player@BC_Feuersee
-          link: https://billard-bvbw.de/verein-mitglied-disziplin.php?p=999||2024/2025|2496||368109|||1|5
+          link: /pool/
 
         - item: Drummer
           link: https://www.bilibili.com/video/BV1954y1a7U6/?spm_id_from=333.337.search-card.all.click 
@@ -96,21 +96,13 @@ publications:
       §: Equal contribution.
     scholar_url: https://scholar.google.com/citations?user=X8je0QsAAAAJ
     papers:
-      - title: "ChartOptimiser: Task-driven Optimisation of Chart Designs"
-        link: "https://arxiv.org/abs/2504.10180"
-        authors: <b>Y. Wang</b>, D. Shi, G. Pan, Z. Hu, A. Oulasvirta, A. Bulling
-        conference: "Technical Report, pp. 1-14, 2025"
-        venue: "arXiv 2025"
-        teaser: /assets/images/publications/wang25_arxiv.png
-        citations: 0
-
       - title: "Towards a Better Understanding of Graph Perception in Immersive Environments"
         link: "https://collaborative-ai.org/publications/zhang25_gd/"
         authors: L. Zhang§, <b>Y. Wang§</b>, Y. Zhang, W. Kerle-Malcharek, K. Klein, F. Schreiber, A. Bulling
         conference: "33rd International Symposium on Graph Drawing and Network Visualization"
         venue: "GD 2025"
         teaser: /assets/images/publications/zhang25_gd.png
-        citations: 0
+        citations: 1
 
       - title: "VisRecall++: Analysing and Predicting Recallability of Information Visualisations from Gaze Behaviour"
         link: "https://collaborative-ai.org/publications/wang24_etra/"
@@ -126,7 +118,7 @@ publications:
         conference: "ACM SIGCHI Conference on Human Factors in Computing Systems"
         venue: "CHI 2024"
         teaser: /assets/images/publications/wang24_chi.png
-        citations: 25
+        citations: 26
 
       - title: "Scanpath Prediction on Information Visualisations"
         link: "https://collaborative-ai.org/publications/wang23_tvcg/"
@@ -134,7 +126,15 @@ publications:
         conference: "IEEE Transactions on Visualization and Computer Graphics, Volume 30, Issue 7, 2023"
         venue: "TVCG"
         teaser: /assets/images/publications/wang23_tvcg.png
-        citations: 41
+        citations: 43
+
+      - title: "ChartOptimiser: Task-driven Optimisation of Chart Designs"
+        link: "https://arxiv.org/abs/2504.10180"
+        authors: <b>Y. Wang</b>, D. Shi, G. Pan, Z. Hu, A. Oulasvirta, A. Bulling
+        conference: "Technical Report, pp. 1-14, 2025"
+        venue: "arXiv 2025"
+        teaser: /assets/images/publications/wang25_arxiv.png
+        citations: 0
 
       - title: Impact of Gaze Uncertainty on AOIs in Information Visualisations
         link: "https://collaborative-ai.org/publications/wang22_etvis/"
@@ -142,7 +142,7 @@ publications:
         conference: "2022 Symposium on Eye Tracking Research and Applications"
         venue: "ETRA 2022"
         teaser: /assets/images/publications/wang22_etvis.png
-        citations: 14
+        citations: 15
 
       - title: Large-scale Structure from Motion with Semantic Constraints of Aerial Images
         link: "https://link.springer.com/chapter/10.1007/978-3-030-03398-9_30"
@@ -150,7 +150,7 @@ publications:
         conference: "Chinese Conference on Pattern Recognition and Computer Vision"
         venue: "PRCV 2018"
         teaser: /assets/images/publications/wang18_prcv.png
-        citations: 123
+        citations: 134
 
 skills:
     knowledgetitle: Knowledge Bases
@@ -205,17 +205,24 @@ memories:
     intro: |
       Snapshots from conferences, research stays, and life outside the lab.
     images:
-      - name: /assets/images/2025-09-24-gd25.jpg
-        desp: GD 2025 in Norrköping, Sweden.
 
       - name: /assets/images/2024-11-05-phd-defense-yao-wang.jpg
         desp: I defended my PhD with summa cum laude on November 2024!
+
+      - name: /assets/images/2026-06-04-etra26.png
+        desp: Reunion with Stuttgarters at ETRA 2026 in Marrakesh, Morocco. First time in Africa!
+
+      - name: /assets/images/2025-09-24-gd25.jpg
+        desp: GD 2025 in Norrköping, Sweden.
 
       - name: /assets/images/2024-06-04-etra24.jpg
         desp: Andreas Bulling Team (previous and now) at ETRA 2024 in Glasgow.
 
       - name: /assets/images/2024-05-15-chi24.jpg
         desp: Stuttgarters at CHI 2024 in Hawaii.
+
+      - name: /assets/images/2023-10-26-vis23.jpg
+        desp: VIS 2023 in Melbourne. First time in Oceania!
 
       - name: /assets/images/2023-06-02-etra23.jpg
         desp: PETMEI workshop at ETRA 2023 in Tübingen.
@@ -227,7 +234,7 @@ memories:
         desp: I served as a student volunteer at CHI 2023 in Hamburg. Photo with Aalto crews.
 
       - name: /assets/images/2023-02-20-aalto.jpg
-        desp: I enjoyed skiing during my research stay at Aalto University, Finland.
+        desp: I learnt and enjoyed skiing during my research stay at Aalto University, Finland.
 
       - name: /assets/images/2022-06-11-etra2022.jpg
         desp: I visited Seattle for ETRA 2022.

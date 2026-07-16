@@ -1,0 +1,430 @@
+#
+# Billiard / pool player profile data, sourced from the official
+# Billard-Verband Baden-Württemberg (BVBW) statistics page:
+# https://billard-bvbw.de/verein-mitglied-statistiken.php?p=999--2025/2026-2496--368109
+#
+# Update this file each time new league matches are recorded — the /pool
+# page (charts, stat tiles, tables) is fully computed from the data below.
+#
+
+player:
+  name: Yao Wang
+  club: BC Stuttgart
+  club_id: 2496
+  pass_number: 368109
+  dbu_number: 369240
+  federation: Billard-Verband Baden-Württemberg e.V. (BVBW)
+  profile_url: https://billard-bvbw.de/verein-mitglied-statistiken.php?p=999--2025/2026-2496--368109
+  photo: /assets/images/2025-09-22-billiard.jpg
+  intro: >
+    I've played pool as a hobby since 2022, and competed for **BC
+    Feuersee** from the 2023/2024 season to the 2025/2026 season. I play now for [BC Stuttgart 1891](https://billard-stuttgart.de/). Each team match pairs
+    players across four disciplines — 8-Ball, 9-Ball, 10-Ball and 14/1
+    (straight pool). Full stats are
+    tracked officially by the
+    [Billard-Verband Baden-Württemberg (BVBW)](https://billard-bvbw.de/verein-mitglied-statistiken.php?p=999--2025/2026-2496--368109).
+
+# Every recorded league match, most recent first.
+# score is always "me:opponent" for the individual discipline frame.
+# league is the division tier (Kreisliga / Bezirksliga); team is the
+# opposing club's team name for that fixture.
+matches:
+  - date: 2026-06-07
+    opponent: Thomas Krüger
+    discipline: "14/1"
+    score: "56:60"
+    result: L
+    league: Kreisliga
+    team: BULL Leonberg-Höfingen 3
+  - date: 2026-05-03
+    opponent: Thomas Gäckle
+    discipline: "14/1"
+    score: "16:60"
+    result: L
+    league: Kreisliga
+    team: PF Calw 1
+  - date: 2026-05-03
+    opponent: Florian Pasch
+    discipline: 9-Ball
+    score: "1:6"
+    result: L
+    league: Kreisliga
+    team: PF Calw 1
+  - date: 2026-04-26
+    opponent: Anastasios Kagelidis
+    discipline: "14/1"
+    score: "60:50"
+    result: W
+    league: Kreisliga
+    team: PP Böblingen 2
+  - date: 2026-04-26
+    opponent: Anastasios Kagelidis
+    discipline: 8-Ball
+    score: "2:5"
+    result: L
+    league: Kreisliga
+    team: PP Böblingen 2
+  - date: 2026-04-19
+    opponent: Marcel Haab
+    discipline: 9-Ball
+    score: "3:7"
+    result: L
+    league: Bezirksliga
+    team: BC Dätzingen 2
+  - date: 2026-04-19
+    opponent: Jörg Claassen
+    discipline: 8-Ball
+    score: "5:4"
+    result: W
+    league: Bezirksliga
+    team: BC Dätzingen 2
+  - date: 2026-03-15
+    opponent: Robert Pinczker
+    discipline: 9-Ball
+    score: "6:1"
+    result: W
+    league: Kreisliga
+    team: TV Cannstatt 4
+  - date: 2026-03-15
+    opponent: Daniel Nieter
+    discipline: "14/1"
+    score: "60:40"
+    result: W
+    league: Kreisliga
+    team: TV Cannstatt 4
+  - date: 2026-02-01
+    opponent: Thomas Krüger
+    discipline: "14/1"
+    score: "54:60"
+    result: L
+    league: Kreisliga
+    team: BULL Leonberg-Höfingen 3
+  - date: 2026-02-01
+    opponent: Thomas Krüger
+    discipline: 9-Ball
+    score: "6:1"
+    result: W
+    league: Kreisliga
+    team: BULL Leonberg-Höfingen 3
+  - date: 2025-12-14
+    opponent: Oliver Hauke
+    discipline: 10-Ball
+    score: "1:5"
+    result: L
+    league: Kreisliga
+    team: PF Calw 1
+  - date: 2025-12-14
+    opponent: Thomas Gäckle
+    discipline: "14/1"
+    score: "37:60"
+    result: L
+    league: Kreisliga
+    team: PF Calw 1
+  - date: 2025-12-07
+    opponent: Thorgen Brett
+    discipline: 10-Ball
+    score: "5:3"
+    result: W
+    league: Kreisliga
+    team: PP Böblingen 2
+  - date: 2025-12-07
+    opponent: Thomas Mooshammer
+    discipline: "14/1"
+    score: "60:23"
+    result: W
+    league: Kreisliga
+    team: PP Böblingen 2
+  - date: 2025-10-26
+    opponent: Marcel Haab
+    discipline: 8-Ball
+    score: "5:1"
+    result: W
+    league: Bezirksliga
+    team: BC Dätzingen 2
+  - date: 2025-10-26
+    opponent: Alexander Egger
+    discipline: "14/1"
+    score: "46:70"
+    result: L
+    league: Bezirksliga
+    team: BC Dätzingen 2
+  - date: 2025-10-12
+    opponent: Marc-Andre Barisch
+    discipline: "14/1"
+    score: "60:40"
+    result: W
+    league: Kreisliga
+    team: TV Cannstatt 4
+  - date: 2025-10-12
+    opponent: Luis Varon Marques
+    discipline: 10-Ball
+    score: "1:5"
+    result: L
+    league: Kreisliga
+    team: TV Cannstatt 4
+  - date: 2025-05-18
+    opponent: Luis Varon Marques
+    discipline: "14/1"
+    score: "33:60"
+    result: L
+    league: Kreisliga
+    team: TV Cannstatt 4
+  - date: 2025-05-18
+    opponent: Thomas Höger
+    discipline: 10-Ball
+    score: "5:3"
+    result: W
+    league: Kreisliga
+    team: TV Cannstatt 4
+  - date: 2025-04-27
+    opponent: Pit Kleyersburg
+    discipline: 8-Ball
+    score: "5:2"
+    result: W
+    league: Kreisliga
+    team: TV Cannstatt 3
+  - date: 2025-04-27
+    opponent: Finn Schmitz
+    discipline: 10-Ball
+    score: "4:5"
+    result: L
+    league: Kreisliga
+    team: TV Cannstatt 3
+  - date: 2025-03-16
+    opponent: Nurcan Ezdi
+    discipline: 9-Ball
+    score: "6:1"
+    result: W
+    league: Kreisliga
+    team: PBC Schwäbisch Gmünd 2
+  - date: 2025-03-16
+    opponent: Nurcan Ezdi
+    discipline: 8-Ball
+    score: "1:5"
+    result: L
+    league: Kreisliga
+    team: PBC Schwäbisch Gmünd 2
+  - date: 2025-02-16
+    opponent: Taner Susuz
+    discipline: 8-Ball
+    score: "5:4"
+    result: W
+    league: Kreisliga
+    team: BC Aalen 4
+  - date: 2025-02-16
+    opponent: Kevin Adamczyk
+    discipline: 10-Ball
+    score: "2:5"
+    result: L
+    league: Kreisliga
+    team: BC Aalen 4
+  - date: 2025-02-09
+    opponent: Timo Buske
+    discipline: 8-Ball
+    score: "5:3"
+    result: W
+    league: Kreisliga
+    team: PBC Aalen 2
+  - date: 2025-02-09
+    opponent: Christin Jentsch
+    discipline: "14/1"
+    score: "60:29"
+    result: W
+    league: Kreisliga
+    team: PBC Aalen 2
+  - date: 2024-12-15
+    opponent: Andreas Knauf
+    discipline: "14/1"
+    score: "31:60"
+    result: L
+    league: Kreisliga
+    team: TV Cannstatt 4
+  - date: 2024-12-15
+    opponent: Thomas Höger
+    discipline: 10-Ball
+    score: "3:5"
+    result: L
+    league: Kreisliga
+    team: TV Cannstatt 4
+  - date: 2024-12-01
+    opponent: Frank Vollath
+    discipline: 9-Ball
+    score: "4:6"
+    result: L
+    league: Kreisliga
+    team: TV Cannstatt 3
+  - date: 2024-12-01
+    opponent: Christian Casagrande
+    discipline: "14/1"
+    score: "60:46"
+    result: W
+    league: Kreisliga
+    team: TV Cannstatt 3
+  - date: 2024-10-27
+    opponent: Stephan Nimführ
+    discipline: "14/1"
+    score: "41:60"
+    result: L
+    league: Kreisliga
+    team: PBC Schwäbisch Gmünd 2
+  - date: 2024-10-27
+    opponent: Stephan Nimführ
+    discipline: 10-Ball
+    score: "4:5"
+    result: L
+    league: Kreisliga
+    team: PBC Schwäbisch Gmünd 2
+  - date: 2024-10-20
+    opponent: Marvin Schiele
+    discipline: 9-Ball
+    score: "3:6"
+    result: L
+    league: Kreisliga
+    team: BC Aalen 4
+  - date: 2024-10-20
+    opponent: Taner Susuz
+    discipline: "14/1"
+    score: "58:60"
+    result: L
+    league: Kreisliga
+    team: BC Aalen 4
+  - date: 2024-09-22
+    opponent: Jürgen Reisner
+    discipline: "14/1"
+    score: "60:51"
+    result: W
+    league: Kreisliga
+    team: PBC Aalen 2
+  - date: 2024-09-22
+    opponent: Markus Schwenke
+    discipline: 9-Ball
+    score: "6:1"
+    result: W
+    league: Kreisliga
+    team: PBC Aalen 2
+  - date: 2024-06-02
+    opponent: Önder Coskun
+    discipline: 8-Ball
+    score: "1:5"
+    result: L
+    league: Kreisliga
+    team: BSC Lions Bietigheim 1
+  - date: 2024-06-02
+    opponent: Önder Coskun
+    discipline: "14/1"
+    score: "19:60"
+    result: L
+    league: Kreisliga
+    team: BSC Lions Bietigheim 1
+  - date: 2024-05-05
+    opponent: Jürgen Müller
+    discipline: "14/1"
+    score: "30:60"
+    result: L
+    league: Kreisliga
+    team: PBC Rastatt 1
+  - date: 2024-05-05
+    opponent: Dominic Spar
+    discipline: 9-Ball
+    score: "6:1"
+    result: W
+    league: Kreisliga
+    team: PBC Rastatt 1
+  - date: 2024-04-14
+    opponent: Rainer Habelt
+    discipline: 10-Ball
+    score: "5:3"
+    result: W
+    league: Kreisliga
+    team: TV Cannstatt 4
+  - date: 2024-04-14
+    opponent: Luis Varon Marques
+    discipline: "14/1"
+    score: "29:60"
+    result: L
+    league: Kreisliga
+    team: TV Cannstatt 4
+  - date: 2024-03-10
+    opponent: Daniel Klapper
+    discipline: "14/1"
+    score: "60:46"
+    result: W
+    league: Kreisliga
+    team: BC Sindelfingen 7
+  - date: 2024-03-10
+    opponent: Hakan Söyler
+    discipline: 9-Ball
+    score: "2:6"
+    result: L
+    league: Kreisliga
+    team: BC Sindelfingen 7
+  - date: 2024-02-18
+    opponent: Saman Hadi
+    discipline: 9-Ball
+    score: "2:6"
+    result: L
+    league: Kreisliga
+    team: BC Dätzingen 2
+  - date: 2024-02-18
+    opponent: Pascal Cecotti
+    discipline: 8-Ball
+    score: "2:5"
+    result: L
+    league: Kreisliga
+    team: BC Dätzingen 2
+  - date: 2023-12-17
+    opponent: Marcus Wittner
+    discipline: 10-Ball
+    score: "5:4"
+    result: W
+    league: Kreisliga
+    team: BSC Lions Bietigheim 1
+  - date: 2023-12-17
+    opponent: Marcus Wittner
+    discipline: 9-Ball
+    score: "6:3"
+    result: W
+    league: Kreisliga
+    team: BSC Lions Bietigheim 1
+  - date: 2023-11-26
+    opponent: Jens Schrader
+    discipline: 10-Ball
+    score: "4:5"
+    result: L
+    league: Kreisliga
+    team: PBC Rastatt 1
+  - date: 2023-10-15
+    opponent: Luis Varon Marques
+    discipline: 9-Ball
+    score: "4:6"
+    result: L
+    league: Kreisliga
+    team: TV Cannstatt 4
+  - date: 2023-09-24
+    opponent: Ingo Mann
+    discipline: 8-Ball
+    score: "5:4"
+    result: W
+    league: Kreisliga
+    team: BC Sindelfingen 7
+  - date: 2023-09-24
+    opponent: Henry Spang
+    discipline: 9-Ball
+    score: "6:4"
+    result: W
+    league: Kreisliga
+    team: BC Sindelfingen 7
+  - date: 2023-09-17
+    opponent: Ralf Krebs
+    discipline: 8-Ball
+    score: "0:5"
+    result: L
+    league: Kreisliga
+    team: BC Dätzingen 2
+  - date: 2023-09-17
+    opponent: Ralf Krebs
+    discipline: 9-Ball
+    score: "4:6"
+    result: L
+    league: Kreisliga
+    team: BC Dätzingen 2
