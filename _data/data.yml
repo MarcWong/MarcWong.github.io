@@ -56,13 +56,14 @@ sidebar:
 career-profile:
     title: About Me
     summary: |
-       I am a Postdoctoral researcher at the University of Stuttgart. I did my PhD supervised by <a href="https://collaborative-ai.org/people/bulling/">Prof. Dr. Andreas Bulling</a>. I was a visiting PhD student at the Aalto University in Prof. Antti Oulasvirta's group in 2023. 
+       I am Yao (Marc) Wang, Chinese name 王尧, a Postdoctoral researcher at the University of Stuttgart. My research goal is to understand human perception and improving human-AI interaction via eye tracking. I did my PhD supervised by <a href="https://collaborative-ai.org/people/bulling/">Prof. Dr. Andreas Bulling</a>. I was a visiting PhD student at the Aalto University in Prof. Antti Oulasvirta's group in 2023. 
 education:
     title: Education
     info:
       - degree: PhD in Computer Science
         university: University of Stuttgart
         time: 2020 - 2024
+        honor: Summa cum laude (1.0)
         details: |
             - Summa cum laude (1.0)
             - Institute of Visualisation and Interactive System
@@ -104,13 +105,13 @@ publications:
         teaser: /assets/images/publications/zhang25_gd.png
         citations: 1
 
-      - title: "VisRecall++: Analysing and Predicting Recallability of Information Visualisations from Gaze Behaviour"
-        link: "https://collaborative-ai.org/publications/wang24_etra/"
-        authors: <b>Y. Wang</b>, Y. Jiang, Z. Hu, C. Ruhdorfer, M. Bâce, A. Bulling
-        conference: "Proc. ACM on Human-Computer Interaction, Volume 8, Issue ETRA, 2024"
-        venue: "PACM HCI"
-        teaser: /assets/images/publications/wang24_etra.png
-        citations: 18
+      # - title: "VisRecall++: Analysing and Predicting Recallability of Information Visualisations from Gaze Behaviour"
+      #   link: "https://collaborative-ai.org/publications/wang24_etra/"
+      #   authors: <b>Y. Wang</b>, Y. Jiang, Z. Hu, C. Ruhdorfer, M. Bâce, A. Bulling
+      #   conference: "Proc. ACM on Human-Computer Interaction, Volume 8, Issue ETRA, 2024"
+      #   venue: "PACM HCI"
+      #   teaser: /assets/images/publications/wang24_etra.png
+      #   citations: 18
 
       - title: "SalChartQA: Question-driven Saliency on Information Visualisations"
         link: "https://collaborative-ai.org/publications/wang24_chi/"
@@ -154,7 +155,24 @@ publications:
 
 skills:
     knowledgetitle: Knowledge Bases
-    title: Programming Languages
+    title: Languages
+
+    language:
+      - name: Chinese
+        level: 100%
+
+      - name: English
+        level: 96%
+
+      - name: German
+        level: 80%
+
+      - name: Cantonese
+        level: 12%
+
+      - name: French
+        level: 10%
+
     knowledgeset:
       - name: Eye Tracking, Human Visual Attention
         level: 99%
@@ -176,26 +194,6 @@ skills:
 
       - name: Natural Language Processing
         level: 75%
-
-
-    toolset:
-      - name: Python
-        level: 99%
-
-      - name: Javascript, CSS, HTML
-        level: 95%
-
-      - name: Matlab
-        level: 75%
-
-      - name: C++
-        level: 70%
-
-      - name: Java
-        level: 60%
-
-      - name: PhP
-        level: 60%
 
 footer: >
     Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a>

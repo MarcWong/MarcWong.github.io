@@ -19,10 +19,18 @@
   <div class="memories-gallery">
     {% for image in memories.images %}
     <figure class="memory-card">
-      <img src="{{ site.baseurl }}{{ image.name }}" alt="{{ image.desp | escape }}" loading="lazy" />
+      <img src="{{ site.baseurl }}{{ image.name }}" alt="{{ image.desp | escape }}" loading="lazy" tabindex="0" role="button" aria-label="View full-size photo: {{ image.desp | escape }}" />
       <figcaption class="memory-desp">{{ image.desp }}</figcaption>
     </figure>
     {% endfor %}
+  </div>
+
+  <div class="lightbox" id="memories-lightbox" aria-hidden="true">
+    <button type="button" class="lightbox-close" aria-label="Close">&times;</button>
+    <button type="button" class="lightbox-prev" aria-label="Previous photo">&lsaquo;</button>
+    <img class="lightbox-image" src="" alt="" />
+    <button type="button" class="lightbox-next" aria-label="Next photo">&rsaquo;</button>
+    <div class="lightbox-caption"></div>
   </div>
 
 </section><!--//section-->

@@ -2,10 +2,10 @@
 {% if skills %}
 <div class="skills-container container-block">
 
-  {% if skills.knowledgeset %}
-  <h2 class="container-block-title">{{ skills.knowledgetitle }}</h2>
+  {% if skills.language %}
+  <h2 class="container-block-title">{{ skills.title }}</h2>
   <ul class="list-unstyled sidebar-skillset">
-    {% for skill in skills.knowledgeset %}
+    {% for skill in skills.language %}
     <li>
       <div class="sidebar-skill-name">{{ skill.name }}</div>
       <div class="sidebar-skill-bar">
@@ -16,10 +16,10 @@
   </ul>
   {% endif %}
 
-  {% if skills.toolset %}
-  <h2 class="container-block-title">{{ skills.title }}</h2>
+  {% if skills.knowledgeset %}
+  <h2 class="container-block-title">{{ skills.knowledgetitle }}</h2>
   <ul class="list-unstyled sidebar-skillset">
-    {% for skill in skills.toolset %}
+    {% for skill in skills.knowledgeset %}
     <li>
       <div class="sidebar-skill-name">{{ skill.name }}</div>
       <div class="sidebar-skill-bar">
