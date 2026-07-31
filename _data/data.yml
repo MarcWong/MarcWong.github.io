@@ -119,7 +119,7 @@ publications:
         conference: "ACM SIGCHI Conference on Human Factors in Computing Systems"
         venue: "CHI 2024"
         teaser: /assets/images/publications/wang24_chi.png
-        citations: 26
+        citations: 28
 
       - title: "Scanpath Prediction on Information Visualisations"
         link: "https://collaborative-ai.org/publications/wang23_tvcg/"
@@ -151,7 +151,7 @@ publications:
         conference: "Chinese Conference on Pattern Recognition and Computer Vision"
         venue: "PRCV 2018"
         teaser: /assets/images/publications/wang18_prcv.png
-        citations: 134
+        citations: 139
 
 skills:
     knowledgetitle: Knowledge Bases
