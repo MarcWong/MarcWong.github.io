@@ -105,21 +105,13 @@ publications:
         teaser: /assets/images/publications/zhang25_gd.png
         citations: 1
 
-      # - title: "VisRecall++: Analysing and Predicting Recallability of Information Visualisations from Gaze Behaviour"
-      #   link: "https://collaborative-ai.org/publications/wang24_etra/"
-      #   authors: <b>Y. Wang</b>, Y. Jiang, Z. Hu, C. Ruhdorfer, M. Bâce, A. Bulling
-      #   conference: "Proc. ACM on Human-Computer Interaction, Volume 8, Issue ETRA, 2024"
-      #   venue: "PACM HCI"
-      #   teaser: /assets/images/publications/wang24_etra.png
-      #   citations: 18
-
       - title: "SalChartQA: Question-driven Saliency on Information Visualisations"
         link: "https://collaborative-ai.org/publications/wang24_chi/"
         authors: <b>Y. Wang</b>, W. Wang, A. Abdelhafez, M. Elfares, Z. Hu, M. Bâce, A. Bulling
         conference: "ACM SIGCHI Conference on Human Factors in Computing Systems"
         venue: "CHI 2024"
         teaser: /assets/images/publications/wang24_chi.png
-        citations: 28
+        citations: 30
 
       - title: "Scanpath Prediction on Information Visualisations"
         link: "https://collaborative-ai.org/publications/wang23_tvcg/"
@@ -127,7 +119,7 @@ publications:
         conference: "IEEE Transactions on Visualization and Computer Graphics, Volume 30, Issue 7, 2023"
         venue: "TVCG"
         teaser: /assets/images/publications/wang23_tvcg.png
-        citations: 43
+        citations: 44
 
       - title: "ChartOptimiser: Task-driven Optimisation of Chart Designs"
         link: "https://arxiv.org/abs/2504.10180"
@@ -151,7 +143,7 @@ publications:
         conference: "Chinese Conference on Pattern Recognition and Computer Vision"
         venue: "PRCV 2018"
         teaser: /assets/images/publications/wang18_prcv.png
-        citations: 139
+        citations: 142
 
 skills:
     knowledgetitle: Knowledge Bases
