@@ -16,6 +16,14 @@
   </div><!--//intro-->
   {% endif %}
 
+  {% if publications.scholar_badge_url %}
+  <div class="scholar-badge">
+    <a href="{{ publications.scholar_url | default: 'https://scholar.google.com/' }}" target="_blank" rel="noopener">
+      <img src="{{ publications.scholar_badge_url }}" alt="Google Scholar total citations" />
+    </a>
+  </div>
+  {% endif %}
+
   {% for publication in publications.papers %}
   <div class="publication-card">
     {% if publication.teaser %}

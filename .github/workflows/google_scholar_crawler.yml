@@ -1,0 +1,38 @@
+name: Update Google Scholar citation badge
+
+on:
+  schedule:
+    - cron: "0 8 * * *" # daily at 08:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update-citations:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r google_scholar_crawler/requirements.txt
+
+      - name: Fetch citation count from Google Scholar
+        run: python google_scholar_crawler/main.py
+        working-directory: google_scholar_crawler
+        env:
+          GOOGLE_SCHOLAR_ID: ${{ secrets.GOOGLE_SCHOLAR_ID }}
+
+      - name: Publish to google-scholar-stats branch
+        working-directory: google_scholar_crawler/results
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "github-actions"
+          git init
+          git add gs_data.json gs_data_shieldsio.json
+          git commit -m "Update citation data"
+          git push "https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" HEAD:google-scholar-stats --force

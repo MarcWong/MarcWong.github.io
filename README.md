@@ -107,6 +107,49 @@ Copy the numbers into the matching `citations:` lines in
 - Set `publications.scholar_url` in `_data/data.yml` to the profile the
   badge should link to.
 
+### Live total-citations badge (auto-updating)
+
+Besides the per-paper badges above, the Publications section also shows a
+single **total citations** badge (the shields.io "Cited by N" pill seen on
+sites like [taohu.me](https://taohu.me/)) that updates itself daily without
+any manual copy-pasting.
+
+It works like this:
+
+1. [`.github/workflows/google_scholar_crawler.yml`](.github/workflows/google_scholar_crawler.yml)
+   runs on a daily cron (and can be triggered manually via
+   "Run workflow" in the Actions tab).
+2. It runs [`google_scholar_crawler/main.py`](google_scholar_crawler/main.py),
+   which uses the [`scholarly`](https://pypi.org/project/scholarly/) Python
+   package to look up the author identified by the `GOOGLE_SCHOLAR_ID`
+   secret and read their total citation count.
+3. The result is written as a [shields.io endpoint JSON](https://shields.io/badges/endpoint-badge)
+   file and force-pushed to an orphan branch named `google-scholar-stats`
+   in this same repo.
+4. `_data/data.yml`'s `publications.scholar_badge_url` points a shields.io
+   badge at that JSON file on GitHub's raw content CDN, so the badge always
+   reflects the last successful crawl.
+
+**One-time setup** (only needed once per fork/repo):
+
+1. Go to **Settings → Secrets and variables → Actions** and add a repository
+   secret named `GOOGLE_SCHOLAR_ID` with your Scholar profile's user id
+   (the `user=` parameter in your Scholar profile URL, e.g. `X8je0QsAAAAJ`).
+2. Go to **Settings → Actions → General → Workflow permissions** and select
+   "Read and write permissions" so the workflow's `GITHUB_TOKEN` is allowed
+   to push the `google-scholar-stats` branch.
+3. Trigger the workflow once manually (Actions tab → "Update Google Scholar
+   citation badge" → Run workflow) instead of waiting for the next cron run.
+4. Update `publications.scholar_badge_url` in `_data/data.yml` to point at
+   your own `<owner>/<repo>` on the `google-scholar-stats` branch, e.g.:
+   ```
+   https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2F<owner>%2F<repo>%2Fgoogle-scholar-stats%2Fgs_data_shieldsio.json&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations
+   ```
+
+Until the workflow has run at least once, the badge URL returns a 404 and
+shields.io shows an "invalid" pill — that's expected and resolves itself
+after the first successful run.
+
 ## Skins
 
 There are 6 color schemes available:

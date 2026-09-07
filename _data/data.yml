@@ -96,6 +96,7 @@ publications:
       See my <a href="https://scholar.google.com/citations?user=X8je0QsAAAAJ">Google Scholar</a> page for full publication list. <br>
       §: Equal contribution.
     scholar_url: https://scholar.google.com/citations?user=X8je0QsAAAAJ
+    scholar_badge_url: https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FMarcWong%2FMarcWong.github.io%2Fgoogle-scholar-stats%2Fgs_data_shieldsio.json&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations
     papers:
       - title: "Towards a Better Understanding of Graph Perception in Immersive Environments"
         link: "https://collaborative-ai.org/publications/zhang25_gd/"
