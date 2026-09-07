@@ -1,4 +1,5 @@
-{% assign career-profile = site.data.data.career-profile %}
+{% assign d = include.data | default: site.data.data %}
+{% assign career-profile = d.career-profile %}
 {% if career-profile %}
 <section class="section summary-section">
 

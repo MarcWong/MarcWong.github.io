@@ -1,4 +1,5 @@
-{% assign publications = site.data.data.publications %}
+{% assign d = include.data | default: site.data.data %}
+{% assign publications = d.publications %}
 {% if publications %}
 <section class="section publications-section">
 
@@ -19,7 +20,7 @@
   {% if publications.scholar_badge_url %}
   <div class="scholar-badge">
     <a href="{{ publications.scholar_url | default: 'https://scholar.google.com/' }}" target="_blank" rel="noopener">
-      <img src="{{ publications.scholar_badge_url }}" alt="Google Scholar total citations" />
+      <img src="{{ publications.scholar_badge_url }}" alt="{% if page.lang == 'zh' %}Google Scholar 总引用量{% else %}Google Scholar total citations{% endif %}" />
     </a>
   </div>
   {% endif %}
@@ -59,9 +60,9 @@
         <a class="publication-citations"
            href="{{ publications.scholar_url | default: 'https://scholar.google.com/' }}"
            target="_blank" rel="noopener"
-           title="Cited by {{ publication.citations }} (Google Scholar)">
+           title="{% if page.lang == 'zh' %}被引用 {{ publication.citations }} 次 (Google Scholar){% else %}Cited by {{ publication.citations }} (Google Scholar){% endif %}">
           <i class="fas fa-quote-right" aria-hidden="true"></i>
-          <span>Cited by {{ publication.citations }}</span>
+          <span>{% if page.lang == 'zh' %}被引 {{ publication.citations }}{% else %}Cited by {{ publication.citations }}{% endif %}</span>
         </a>
         {% endif %}
         <span class="publication-conference">{{ publication.conference }}</span>

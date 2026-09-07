@@ -33,6 +33,56 @@ p {
   line-height: 1.5;
 }
 
+.lang-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  background: rgba(255, 255, 255, 0.88);
+  color: $text-color;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+
+  .fas {
+    font-size: 13px;
+    color: $theme-color;
+  }
+
+  &:hover,
+  &:focus {
+    background: #fff;
+    color: $text-color;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .lang-toggle {
+    top: 12px;
+    right: 12px;
+    padding: 6px 11px;
+    font-size: 11px;
+  }
+}
+
 .wrapper {
   display: grid;
   grid-template-columns: repeat(10, 1fr);

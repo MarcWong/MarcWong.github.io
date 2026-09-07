@@ -1,11 +1,14 @@
 ---
 layout: default
-lang: en
-alt_url: /zh/
-alt_label: 中文
+lang: zh
+data_key: data_zh
+title: 王尧 Yao Wang | 个人主页
+permalink: /zh/
+alt_url: /
+alt_label: EN
 ---
 
-{% assign d = site.data.data %}
+{% assign d = site.data.data_zh %}
 
 {% include career-profile.html data=d %}
 
@@ -15,13 +18,6 @@ alt_label: 中文
 
 {% include experiences.html data=d %}
 
-<!--
-{% include certifications.html %}
-
-{% include projects.html %}
-
-{% include oss-contributions.html %} -->
-
 {% include publications.html data=d %}
 
 <section class="section memories-teaser-section">
@@ -30,10 +26,22 @@ alt_label: 中文
       <i class="fas fa-circle fa-stack-2x"></i>
       <i class="fas fa-camera fa-stack-1x fa-inverse"></i>
     </span>
-    Memories
+    点滴回忆
   </h2>
-  <p>Snapshots from conferences, research stays, and life outside the lab.</p>
-  <a class="memories-link" href="{{ '/memories/' | relative_url }}">Browse Memories &rarr;</a>
+  <p>来自各地会议、访问交流与实验室之外生活的一些瞬间。</p>
+  <a class="memories-link" href="{{ '/zh/memories/' | relative_url }}">浏览相册 &rarr;</a>
+</section>
+
+<section class="section pool-teaser-section">
+  <h2 class="section-title">
+    <span class="fa-stack fa-xs">
+      <i class="fas fa-circle fa-stack-2x"></i>
+      <i class="fas fa-bowling-ball fa-stack-1x fa-inverse"></i>
+    </span>
+    台球
+  </h2>
+  <p>台球是我最大的爱好</p>
+  <a class="memories-link" href="{{ '/pool/' | relative_url }}">查看球员主页 &rarr;</a>
 </section>
 
 <section class="section visitors-section">
@@ -42,7 +50,7 @@ alt_label: 中文
       <i class="fas fa-circle fa-stack-2x"></i>
       <i class="fas fa-globe fa-stack-1x fa-inverse"></i>
     </span>
-    Visitors
+    访客地图
   </h2>
   <div class="visitors-widget">
     <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=48wXOEA9PTzpVNtJTNhpDCKxbuGtoS07onDVGivJdPQ&cl=ffffff&w=a"></script>

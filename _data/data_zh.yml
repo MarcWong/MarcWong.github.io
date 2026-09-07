@@ -1,0 +1,227 @@
+#
+# Chinese (zh) translation of _data/data.yml.
+# Mirrors the same structure so every include can render either file.
+# Paper titles/authors/venues are kept in their original (English) form,
+# matching common practice on academic homepages.
+#
+
+sidebar:
+    position: right
+    about: False
+    education: True
+
+    # Profile information
+    name: 王尧 Yao Wang
+    tagline: 博士后研究员
+    avatar: profile.png
+
+    # Sidebar links
+    email: yao.wang@vis.uni-stuttgart.de
+    phone:
+    timezone: 中欧时区 (CET)
+    address: 
+    citizenship: 
+    website: collaborative-ai.org/people/wang/
+    linkedin: yao-wang-a93ab9217
+    xing:
+    github: marcwong
+    telegram:
+    gitlab:
+    bitbucket:
+    twitter:
+    stack-overflow:
+    codewars:
+    goodreads:
+    pdf: Curriculum_Vitae_Yao_Wang.pdf
+
+    languages:
+      title: 语言
+      info:
+        - idiom: 中文
+          level: 母语
+
+        - idiom: 英语
+          level: 熟练
+
+        - idiom: 德语
+          level: B1-B2
+
+    interests:
+      title: 兴趣爱好
+      info:
+        - item: 台球爱好者 @BC Stuttgart
+          link: /pool/
+
+        - item: 鼓手
+          link: https://www.bilibili.com/video/BV1954y1a7U6/?spm_id_from=333.337.search-card.all.click
+
+
+career-profile:
+    title: 关于我
+    summary: |
+       我是王尧（Yao/Marc Wang），现为斯图加特大学（University of Stuttgart）博士后研究员。我的研究目标是理解人类感知机制，并借助眼动追踪技术改善人机交互体验。我的博士生导师是 <a href="https://collaborative-ai.org/people/bulling/">Prof. Dr. Andreas Bulling</a>。
+education:
+    title: 教育背景
+    info:
+      - degree: 计算机科学博士
+        university: 斯图加特大学 (University of Stuttgart)
+        time: 2020 - 2024
+        honor: 最高荣誉学位 (1.0)
+        details: |
+            - 最高荣誉学位 (summa cum laude, 1.0)
+            - 可视化与交互系统研究所 (Institute of Visualisation and Interactive System)
+      - degree: 计算机软件与理论硕士
+        university: 北京大学 (Peking University)
+        time: 2017 - 2020
+        details: |
+            - 平均绩点：3.50 / 4.0
+      - degree: 智能科学与技术学士
+        university: 北京大学 (Peking University)
+        time: 2013 - 2017
+        details: |
+            - 平均绩点：3.34 / 4.0
+# experiences:
+#     title: 工作经历
+#     info:
+#       - role: 博士研究生
+#         time: 2020 - 2024
+#         company: 斯图加特大学 (University of Stuttgart)
+#         details: |
+#           我的博士研究方向是面向信息可视化优化的视觉注意力建模，隶属于 <a href="https://www.sfbtrr161.de/research/project_a07/">SFB-TRR 161</a> 项目 A07。
+
+publications:
+    title: 代表性论文
+    intro: |
+      完整论文列表请见我的 <a href="https://scholar.google.com/citations?user=X8je0QsAAAAJ">Google Scholar</a> 主页。<br>
+      §：共同贡献。
+    scholar_url: https://scholar.google.com/citations?user=X8je0QsAAAAJ
+    scholar_badge_url: https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FMarcWong%2FMarcWong.github.io%2Fgoogle-scholar-stats%2Fgs_data_shieldsio.json&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations
+    papers:
+      - title: "Towards a Better Understanding of Graph Perception in Immersive Environments"
+        link: "https://collaborative-ai.org/publications/zhang25_gd/"
+        authors: L. Zhang§, <b>Y. Wang§</b>, Y. Zhang, W. Kerle-Malcharek, K. Klein, F. Schreiber, A. Bulling
+        conference: "33rd International Symposium on Graph Drawing and Network Visualization"
+        venue: "GD 2025"
+        teaser: /assets/images/publications/zhang25_gd.png
+        citations: 1
+
+      - title: "SalChartQA: Question-driven Saliency on Information Visualisations"
+        link: "https://collaborative-ai.org/publications/wang24_chi/"
+        authors: <b>Y. Wang</b>, W. Wang, A. Abdelhafez, M. Elfares, Z. Hu, M. Bâce, A. Bulling
+        conference: "ACM SIGCHI Conference on Human Factors in Computing Systems"
+        venue: "CHI 2024"
+        teaser: /assets/images/publications/wang24_chi.png
+        citations: 30
+
+      - title: "Scanpath Prediction on Information Visualisations"
+        link: "https://collaborative-ai.org/publications/wang23_tvcg/"
+        authors: <b>Y. Wang</b>, M. Bâce, A. Bulling
+        conference: "IEEE Transactions on Visualization and Computer Graphics, Volume 30, Issue 7, 2023"
+        venue: "TVCG"
+        teaser: /assets/images/publications/wang23_tvcg.png
+        citations: 45
+
+      - title: "ChartOptimiser: Task-driven Optimisation of Chart Designs"
+        link: "https://arxiv.org/abs/2504.10180"
+        authors: <b>Y. Wang</b>, D. Shi, G. Pan, Z. Hu, A. Oulasvirta, A. Bulling
+        conference: "Technical Report, pp. 1-14, 2025"
+        venue: "arXiv 2025"
+        teaser: /assets/images/publications/wang25_arxiv.png
+        citations: 0
+
+      - title: Impact of Gaze Uncertainty on AOIs in Information Visualisations
+        link: "https://collaborative-ai.org/publications/wang22_etvis/"
+        authors: <b>Y. Wang§</b>, M. Koch§, M. Bâce, D. Weiskopf, A. Bulling
+        conference: "2022 Symposium on Eye Tracking Research and Applications"
+        venue: "ETRA 2022"
+        teaser: /assets/images/publications/wang22_etvis.png
+        citations: 15
+
+      - title: Large-scale Structure from Motion with Semantic Constraints of Aerial Images
+        link: "https://link.springer.com/chapter/10.1007/978-3-030-03398-9_30"
+        authors: Y. Chen§, <b>Y. Wang§</b>, P. Lu, Y. Chen, G. Wang
+        conference: "Chinese Conference on Pattern Recognition and Computer Vision"
+        venue: "PRCV 2018"
+        teaser: /assets/images/publications/wang18_prcv.png
+        citations: 143
+
+skills:
+    knowledgetitle: 专业领域
+    title: 语言能力
+
+    language:
+      - name: 中文
+        level: 100%
+
+      - name: 英语
+        level: 96%
+
+      - name: 德语
+        level: 80%
+
+    knowledgeset:
+      - name: 眼动追踪与人类视觉注意力
+        level: 99%
+
+      - name: 信息可视化
+        level: 95%
+
+      - name: 深度学习
+        level: 90%
+
+      - name: 计算机视觉
+        level: 90%
+
+      - name: 人机交互
+        level: 88%
+
+      - name: 虚拟现实 / 增强现实
+        level: 85%
+
+      - name: 自然语言处理
+        level: 75%
+
+footer: >
+    由 <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a> 设计 <i class="fas fa-heart"></i>
+
+memories:
+    title: 点滴回忆
+    intro: |
+      来自各地会议、访问交流与实验室之外生活的一些瞬间。
+    images:
+
+      - name: /assets/images/2024-11-05-phd-defense-yao-wang.jpg
+        desp: 2024 年 11 月，我以优异成绩通过博士答辩！
+
+      - name: /assets/images/2026-06-04-etra26.png
+        desp: 与斯图加特的伙伴们在摩洛哥马拉喀什的 ETRA 2026 重聚，第一次踏上非洲大陆！
+
+      - name: /assets/images/2025-09-24-gd25.jpg
+        desp: 2025 年在瑞典诺尔雪平参加 GD 2025。
+
+      - name: /assets/images/2024-06-04-etra24.jpg
+        desp: 与 Andreas Bulling 团队（新老成员）在格拉斯哥参加 ETRA 2024。
+
+      - name: /assets/images/2024-05-15-chi24.jpg
+        desp: 斯图加特同事们在夏威夷参加 CHI 2024。
+
+      - name: /assets/images/2023-10-26-vis23.jpg
+        desp: 在墨尔本参加 VIS 2023，第一次踏上大洋洲！
+
+      - name: /assets/images/2023-06-02-etra23.jpg
+        desp: 在图宾根参加 ETRA 2023 的 PETMEI 研讨会。
+
+      - name: /assets/images/2025-09-22-billiard.jpg
+        desp: 台球是我 2022 年起的爱好，我在斯图加特的一家本地俱乐部打球。
+
+      - name: /assets/images/2023-04-25-chi23.jpg
+        desp: 我作为学生志愿者参加了在汉堡举办的 CHI 2023，图为与阿尔托大学伙伴们的合影。
+
+      - name: /assets/images/2023-02-20-aalto.jpg
+        desp: 在阿尔托大学访问交流期间，我第一次学习并爱上了滑雪。
+
+      - name: /assets/images/2022-06-11-etra2022.jpg
+        desp: 前往西雅图参加 ETRA 2022。
+
+      - name: /assets/images/2021-12-24-grancanaria.jpg
+        desp: 2021 年圣诞节，我在大加那利岛度假。

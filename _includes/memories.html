@@ -1,4 +1,5 @@
-{% assign memories = site.data.data.memories %}
+{% assign d = include.data | default: site.data.data %}
+{% assign memories = d.memories %}
 {% if memories %}
 <section class="section summary-section">
 
@@ -19,17 +20,17 @@
   <div class="memories-gallery">
     {% for image in memories.images %}
     <figure class="memory-card">
-      <img src="{{ site.baseurl }}{{ image.name }}" alt="{{ image.desp | escape }}" loading="lazy" tabindex="0" role="button" aria-label="View full-size photo: {{ image.desp | escape }}" />
+      <img src="{{ site.baseurl }}{{ image.name }}" alt="{{ image.desp | escape }}" loading="lazy" tabindex="0" role="button" aria-label="{% if page.lang == 'zh' %}查看大图：{{ image.desp | escape }}{% else %}View full-size photo: {{ image.desp | escape }}{% endif %}" />
       <figcaption class="memory-desp">{{ image.desp }}</figcaption>
     </figure>
     {% endfor %}
   </div>
 
   <div class="lightbox" id="memories-lightbox" aria-hidden="true">
-    <button type="button" class="lightbox-close" aria-label="Close">&times;</button>
-    <button type="button" class="lightbox-prev" aria-label="Previous photo">&lsaquo;</button>
+    <button type="button" class="lightbox-close" aria-label="{% if page.lang == 'zh' %}关闭{% else %}Close{% endif %}">&times;</button>
+    <button type="button" class="lightbox-prev" aria-label="{% if page.lang == 'zh' %}上一张{% else %}Previous photo{% endif %}">&lsaquo;</button>
     <img class="lightbox-image" src="" alt="" />
-    <button type="button" class="lightbox-next" aria-label="Next photo">&rsaquo;</button>
+    <button type="button" class="lightbox-next" aria-label="{% if page.lang == 'zh' %}下一张{% else %}Next photo{% endif %}">&rsaquo;</button>
     <div class="lightbox-caption"></div>
   </div>
 

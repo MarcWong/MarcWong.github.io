@@ -1,15 +1,33 @@
 ---
 #Add "layout: compress" here to compress the html code
 ---
+{% assign current_lang = page.lang | default: 'en' %}
+{% assign data_key = page.data_key | default: 'data' %}
+{% assign d = site.data[data_key] %}
+{% if page.alt_url %}
+  {% assign toggle_href = page.alt_url %}
+  {% assign toggle_label = page.alt_label %}
+{% elsif current_lang == 'zh' %}
+  {% assign toggle_href = '/' %}
+  {% assign toggle_label = 'EN' %}
+{% else %}
+  {% assign toggle_href = '/zh/' %}
+  {% assign toggle_label = '中文' %}
+{% endif %}
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<!--[if IE 8]> <html lang="{{ current_lang }}" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="{{ current_lang }}" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="{{ current_lang }}"> <!--<![endif]-->
 {% include head.html %}
 
 <body>
+  <a class="lang-toggle" href="{{ toggle_href | relative_url }}" aria-label="{% if current_lang == 'zh' %}Switch to English{% else %}切换到中文{% endif %}">
+    <i class="fas fa-language" aria-hidden="true"></i>
+    <span>{{ toggle_label }}</span>
+  </a>
+
   <div class="wrapper">
-    {% include sidebar.html %}
+    {% include sidebar.html data=d %}
 
     <div class="main-wrapper">
         {{ content }}

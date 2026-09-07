@@ -2,10 +2,13 @@
 layout: default
 title: Memories
 permalink: /memories/
+lang: en
+alt_url: /zh/memories/
+alt_label: 中文
 ---
 
 <div class="memories-page-back" style="margin-bottom: 16px;">
   <a class="memories-link" href="{{ '/' | relative_url }}">&larr; Back to home</a>
 </div>
 
-{% include memories.html %}
+{% include memories.html data=site.data.data %}

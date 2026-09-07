@@ -1,3 +1,4 @@
+{% assign sidebar = include.data.sidebar | default: site.data.data.sidebar %}
 <div class="contact-container container-block">
   <ul class="list-unstyled contact-list">
 
@@ -99,7 +100,7 @@
 
     {% if sidebar.pdf %}
     <li class="pdf"><i class="fas fa-file-pdf"></i>
-      <a href="{{ sidebar.pdf }}" target="_blank">Resume(updated May 2026)</a>
+      <a href="{{ sidebar.pdf }}" target="_blank">{% if page.lang == 'zh' %}简历（2026年9月更新）{% else %}Resume(updated Sept. 2026){% endif %}</a>
     </li>
     {% endif %}
 

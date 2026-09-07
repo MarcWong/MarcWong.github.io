@@ -16,16 +16,16 @@ sidebar:
     email: yao.wang@vis.uni-stuttgart.de
     phone: # +49 0172 5388 764
     timezone: CET
-    address: Stuttgart, Germany
-    citizenship: China
+    address: 
+    citizenship: 
     website: collaborative-ai.org/people/wang/ #do not add http://
     linkedin: yao-wang-a93ab9217
-    xing: Yao_Wang090809
+    xing: 
     github: marcwong
     telegram: # add your nickname without '@' sign
     gitlab:
     bitbucket:
-    twitter: '@Marc_Y_Wang'
+    twitter: 
     stack-overflow: # Number/Username, e.g. 123456/alandoe
     codewars:
     goodreads: # Number-Username, e.g. 123456-alandoe
@@ -56,7 +56,7 @@ sidebar:
 career-profile:
     title: About Me
     summary: |
-       I am Yao (Marc) Wang, Chinese name 王尧, a Postdoctoral researcher at the University of Stuttgart. My research goal is to understand human perception and improving human-AI interaction via eye tracking. I did my PhD supervised by <a href="https://collaborative-ai.org/people/bulling/">Prof. Dr. Andreas Bulling</a>. I was a visiting PhD student at the Aalto University in Prof. Antti Oulasvirta's group in 2023. 
+       I am Yao (Marc) Wang, Chinese name 王尧, a Postdoctoral researcher at the University of Stuttgart. My research goal is to understand human perception and improving human-AI interaction via eye tracking. I did my PhD supervised by <a href="https://collaborative-ai.org/people/bulling/">Prof. Dr. Andreas Bulling</a>. 
 education:
     title: Education
     info:
@@ -67,19 +67,16 @@ education:
         details: |
             - Summa cum laude (1.0)
             - Institute of Visualisation and Interactive System
-            - Collaborative AI Lab
       - degree: M.Sc. in Computer Software and Technology
         university: Peking University
         time: 2017 - 2020
         details: |
             - GPA: 3.50 / 4.0
-            - key courses: Image and Video Based 3D Reconstruction, Computational Vision, Advanced Graphics Computing, Technique and Application of Deep Learning, Human Computer Interaction: Theory and Techniques
       - degree: B.Sc. in Intelligence Science and Technology
         university: Peking University
         time: 2013 - 2017
         details: |
             - GPA: 3.34 / 4.0
-            - key courses: Data Structures and Algorithms, Algorithm Design and Analysis, Introduction to Computer Systems, Introduction to Pattern Recognition, Digital Image Processing, Set and Graph Theory, Web Software Technology
 # experiences:
 #     title: Experiences
 #     info:
@@ -159,12 +156,6 @@ skills:
 
       - name: German
         level: 80%
-
-      - name: Cantonese
-        level: 12%
-
-      - name: French
-        level: 10%
 
     knowledgeset:
       - name: Eye Tracking, Human Visual Attention

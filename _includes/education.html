@@ -1,6 +1,7 @@
-{% assign education = site.data.data.education %}
+{% assign d = include.data | default: site.data.data %}
+{% assign education = d.education %}
 {% if education %}
-  {% if site.data.data.sidebar.education %}
+  {% if d.sidebar.education %}
   <div class="education-container container-block">
 
     <h2 class="container-block-title">
