@@ -29,6 +29,20 @@ player:
 # league is the division tier (Kreisliga / Bezirksliga); team is the
 # opposing club's team name for that fixture.
 matches:
+  - date: 2026-09-20
+    opponent: Tobias Linnow
+    discipline: "8-Ball"
+    score: "5:1"
+    result: W
+    league: Kreisliga
+    team: BSV Shooters Fellbach 3
+  - date: 2026-09-20
+    opponent: Pit Kleyersburg
+    discipline: "14/1"
+    score: "60:49"
+    result: W
+    league: Kreisliga
+    team: BSV Shooters Fellbach 3
   - date: 2026-06-07
     opponent: Thomas Krüger
     discipline: "14/1"

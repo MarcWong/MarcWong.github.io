@@ -228,13 +228,8 @@
 
       <!-- endpoint marker + current value -->
       <circle cx="{{ last_px }}" cy="{{ last_py }}" r="4.5" fill="{{ endpoint_color }}"/>
-      <text x="{{ last_px | plus: 8 }}" y="{{ last_py | plus: 4 }}" font-size="13" font-weight="700" fill="{{ endpoint_color }}">{{ final_diff }}</text>
 
-      <!-- x-axis endpoints -->
-      <text x="{{ trend_left }}" y="{{ trend_bottom | plus: 18 }}" text-anchor="start" font-size="10" fill="#898781">Game 1</text>
-      <text x="{{ trend_right }}" y="{{ trend_bottom | plus: 18 }}" text-anchor="end" font-size="10" fill="#898781">Game {{ total }}</text>
     </svg>
-    <p class="pool-chart-caption">Running total of wins minus losses, oldest match to newest. Currently <strong style="color: {{ endpoint_color }}">{{ final_diff }}</strong> ({{ win_count }}W&ndash;{{ loss_count }}L).</p>
   </div><!--//pool-chart-card-->
 
   <div class="pool-charts-row">
