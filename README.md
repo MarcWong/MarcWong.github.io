@@ -113,18 +113,18 @@ block in `data_zh.yml`.
   never lowered by this script.
 - Set `publications.scholar_url` to the profile the badge should link to.
 
-### Live total-citations badge (auto-updating)
+### Total-citations badge
 
 Besides the per-paper badges above, the Publications section also shows a
 single **total citations** badge (the shields.io "Cited by N" pill seen on
-sites like [taohu.me](https://taohu.me/)) that updates itself daily without
-any manual copy-pasting.
+sites like [taohu.me](https://taohu.me/)) that is refreshed with a single
+command instead of manual copy-pasting.
 
 It works like this:
 
 1. [`.github/workflows/google_scholar_crawler.yml`](.github/workflows/google_scholar_crawler.yml)
-   runs on a daily cron (and can be triggered manually via
-   "Run workflow" in the Actions tab).
+   can be triggered manually via "Run workflow" in the Actions tab. It has no
+   schedule, because Google blocks GitHub's servers (see Troubleshooting).
 2. It runs [`google_scholar_crawler/main.py`](google_scholar_crawler/main.py),
    which requests the public Scholar profile of the user in the
    `GOOGLE_SCHOLAR_ID` secret and reads the total citation count (standard
@@ -148,7 +148,7 @@ It works like this:
    "Read and write permissions" so the workflow's `GITHUB_TOKEN` is allowed
    to push the `google-scholar-stats` branch.
 3. Trigger the workflow once manually (Actions tab → "Update Google Scholar
-   citation badge" → Run workflow) instead of waiting for the next cron run.
+   citation badge" → Run workflow).
 4. Update `publications.scholar_badge_url` in `_data/data.yml` to point at
    your own `<owner>/<repo>` on the `google-scholar-stats` branch, e.g.:
    ```
@@ -159,10 +159,20 @@ Until the workflow has run at least once, the badge URL returns a 404 and
 shields.io shows an "invalid" pill — that's expected and resolves itself
 after the first successful run.
 
-**Troubleshooting.** Google Scholar sometimes blocks requests from cloud IPs
-(GitHub-hosted runners). If the fetch step fails with a CAPTCHA or timeout,
-run `GOOGLE_SCHOLAR_ID=<id> python3 google_scholar_crawler/main.py` on your own
-machine (home IPs are usually not blocked) to check the profile is readable.
+**Troubleshooting.** Google blocks GitHub-hosted runners (the fetch step fails
+with `HTTP 403`), so in practice the badge data is published from your own
+machine, where home IPs are normally not blocked:
+
+```bash
+bash scripts/publish_scholar_badge.sh
+```
+
+It fetches the count with `google_scholar_crawler/main.py` and adds a commit to
+the `google-scholar-stats` branch (created on the first run, never
+force-pushed). Re-run it whenever you want the badge refreshed, or schedule it
+with `cron`/`launchd`. The Action's daily schedule was removed because it could
+only fail while Google blocks it; it is now manual-only.
+
 Do not use the `scholarly` package for this job: when blocked it retries
 forever and hangs the workflow.
 
