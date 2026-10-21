@@ -126,9 +126,12 @@ It works like this:
    runs on a daily cron (and can be triggered manually via
    "Run workflow" in the Actions tab).
 2. It runs [`google_scholar_crawler/main.py`](google_scholar_crawler/main.py),
-   which uses the [`scholarly`](https://pypi.org/project/scholarly/) Python
-   package to look up the author identified by the `GOOGLE_SCHOLAR_ID`
-   secret and read their total citation count.
+   which requests the public Scholar profile of the user in the
+   `GOOGLE_SCHOLAR_ID` secret and reads the total citation count (standard
+   library only, no dependencies). Requests have hard timeouts, and the job
+   itself is capped at 5 minutes: if Google blocks GitHub's servers the run
+   fails fast with a CAPTCHA/network message and the last good badge data is
+   kept.
 3. The result is written as a [shields.io endpoint JSON](https://shields.io/badges/endpoint-badge)
    file and force-pushed to an orphan branch named `google-scholar-stats`
    in this same repo.
@@ -155,6 +158,13 @@ It works like this:
 Until the workflow has run at least once, the badge URL returns a 404 and
 shields.io shows an "invalid" pill — that's expected and resolves itself
 after the first successful run.
+
+**Troubleshooting.** Google Scholar sometimes blocks requests from cloud IPs
+(GitHub-hosted runners). If the fetch step fails with a CAPTCHA or timeout,
+run `GOOGLE_SCHOLAR_ID=<id> python3 google_scholar_crawler/main.py` on your own
+machine (home IPs are usually not blocked) to check the profile is readable.
+Do not use the `scholarly` package for this job: when blocked it retries
+forever and hangs the workflow.
 
 ## Skins
 

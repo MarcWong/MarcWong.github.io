@@ -11,15 +11,13 @@ permissions:
 jobs:
   update-citations:
     runs-on: ubuntu-latest
+    timeout-minutes: 5 # a blocked Scholar request must fail fast, never hang
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-
-      - name: Install dependencies
-        run: pip install -r google_scholar_crawler/requirements.txt
 
       - name: Fetch citation count from Google Scholar
         run: python main.py
