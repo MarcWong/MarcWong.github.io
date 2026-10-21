@@ -141,7 +141,7 @@ publications:
         conference: "Chinese Conference on Pattern Recognition and Computer Vision"
         venue: "PRCV 2018"
         teaser: /assets/images/publications/wang18_prcv.png
-        citations: 147
+        citations: 150
 
 skills:
     knowledgetitle: Knowledge Bases

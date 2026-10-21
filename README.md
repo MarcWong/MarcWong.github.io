@@ -66,46 +66,52 @@ bundle exec jekyll serve
 
 ## Updating Google Scholar citation counts
 
-Each entry under `publications.papers` in `_data/data.yml` carries a
-`citations:` field. When the value is `> 10`, `_includes/publications.html`
-renders a small "Cited by N" badge linking to the Scholar profile defined by
-`publications.scholar_url`.
+Each entry under `publications.papers` carries a `citations:` field. When the
+value is `> 10`, `_includes/publications.html` renders a small "Cited by N"
+badge linking to the Scholar profile defined by `publications.scholar_url`.
 
-Google Scholar has no public API, so the workflow is **scrape → eyeball → paste**:
+The site has two data files, and the script keeps both in step:
+
+| File | Page | Role |
+| --- | --- | --- |
+| `_data/data.yml` | English (`/`) | source of truth |
+| `_data/data_zh.yml` | Chinese (`/zh/`) | mirrors the English papers |
 
 ```bash
-# Uses the Scholar user id from _data/data.yml by default
+# Dry run first: shows what would change in both files, writes nothing
+python3 scripts/fetch_scholar_citations.py --dry-run
+
+# Apply (Scholar user id defaults to the one in the script)
 python3 scripts/fetch_scholar_citations.py
-
-# Or pass another profile's id explicitly
-python3 scripts/fetch_scholar_citations.py X8je0QsAAAAJ
 ```
 
-The script prints the full publication list with citation counts and marks
-the rows that qualify for the badge:
+What a run does:
 
-```
-Cites  Year  Title
-----------------------------------------------------------------------
-  123 *2018  Large-scale Structure from Motion with Semantic Constraints ...
-   41 *2023  Scanpath Prediction on Information Visualisations
-   25 *2024  SalChartQA: Question-driven Saliency on Information ...
-   ...
-* = qualifies for the citation badge (citations > 10).
-```
+1. Copies the whole `publications.papers` block from `data.yml` into
+   `data_zh.yml`, so a paper added, removed or reworded in English shows up
+   on the Chinese page too (paper entries are untranslated English).
+2. Scrapes Scholar once and rewrites the `citations:` lines in **both** files.
+3. Warns if the translated parts of `data_zh.yml` have fallen out of step with
+   English, e.g. a new memories photo that still needs a Chinese `desp`, or a
+   different number of education entries. These need translating by hand.
 
-Copy the numbers into the matching `citations:` lines in
-`_data/data.yml`. Titles in Scholar may differ slightly from the ones in
-`data.yml`, so match by eye rather than by string equality.
+Useful flags: `--no-sync` (only update counts, don't copy papers),
+`--no-fetch` (only sync and check for drift, no Scholar request),
+`--min N` (badge threshold), `--data PATH` (repeatable; first file is the
+source of truth). Run `python3 scripts/fetch_scholar_citations.py --help`.
+
+Edit paper entries in `data.yml` only; the next run overwrites the papers
+block in `data_zh.yml`.
 
 **Caveats**
 
-- Scholar rate-limits and serves a CAPTCHA after repeated scrapes — run
+- Scholar rate-limits and serves a CAPTCHA after repeated scrapes: run
   sparingly (e.g. once a month) and from a residential IP.
-- The script never edits `data.yml` for you; that step is manual on
-  purpose so a flaky scrape can't corrupt the data.
-- Set `publications.scholar_url` in `_data/data.yml` to the profile the
-  badge should link to.
+- Titles are matched fuzzily; papers with no Scholar match (e.g. very new
+  ones) are listed and left untouched.
+- Counts at or below `--min` are not written, so a stale larger number is
+  never lowered by this script.
+- Set `publications.scholar_url` to the profile the badge should link to.
 
 ### Live total-citations badge (auto-updating)
 
