@@ -22,7 +22,7 @@ jobs:
         run: pip install -r google_scholar_crawler/requirements.txt
 
       - name: Fetch citation count from Google Scholar
-        run: python google_scholar_crawler/main.py
+        run: python main.py
         working-directory: google_scholar_crawler
         env:
           GOOGLE_SCHOLAR_ID: ${{ secrets.GOOGLE_SCHOLAR_ID }}
