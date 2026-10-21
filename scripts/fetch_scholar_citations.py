@@ -306,7 +306,11 @@ def main() -> int:
 
     scholar: list[tuple[int, str, str]] = []
     if not args.no_fetch:
-        page = fetch(args.user)
+        try:
+            page = fetch(args.user)
+        except (OSError, ValueError) as e:  # URLError/HTTPError/timeout are OSErrors
+            print(f"Could not read the Scholar profile: {e}", file=sys.stderr)
+            return 2
         if "captcha" in page.lower() or "unusual traffic" in page.lower():
             print("Scholar served a CAPTCHA. Try again later.", file=sys.stderr)
             return 2

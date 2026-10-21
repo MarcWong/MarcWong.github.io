@@ -167,11 +167,19 @@ machine, where home IPs are normally not blocked:
 bash scripts/publish_scholar_badge.sh
 ```
 
-It fetches the count with `google_scholar_crawler/main.py` and adds a commit to
-the `google-scholar-stats` branch (created on the first run, never
-force-pushed). Re-run it whenever you want the badge refreshed, or schedule it
-with `cron`/`launchd`. The Action's daily schedule was removed because it could
-only fail while Google blocks it; it is now manual-only.
+This is the one command that refreshes **every** Scholar number on the site:
+
+1. `scripts/fetch_scholar_citations.py` updates the per-paper counts in
+   `_data/data.yml` and `_data/data_zh.yml` (see the section above). It only
+   edits the files; review and commit them to update the pages.
+2. `google_scholar_crawler/main.py` fetches the total, and the script adds a
+   commit to the `google-scholar-stats` branch (created on the first run, never
+   force-pushed) that the badge reads.
+
+The two steps are independent: if one fails the other still runs and the exit
+code is non-zero. Re-run it whenever you like, or schedule it with
+`cron`/`launchd`. The Action's daily schedule was removed because it could only
+fail while Google blocks it; it is now manual-only.
 
 Do not use the `scholarly` package for this job: when blocked it retries
 forever and hangs the workflow.
