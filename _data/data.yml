@@ -119,13 +119,13 @@ publications:
         teaser: /assets/images/publications/wang23_tvcg.png
         citations: 45
 
-      - title: "ChartOptimiser: Task-driven Optimisation of Chart Designs"
-        link: "https://arxiv.org/abs/2504.10180"
-        authors: <b>Y. Wang</b>, D. Shi, G. Pan, Z. Hu, A. Oulasvirta, A. Bulling
-        conference: "Technical Report, pp. 1-14, 2025"
-        venue: "arXiv 2025"
-        teaser: /assets/images/publications/wang25_arxiv.png
-        citations: 0
+      # - title: "ChartOptimiser: Task-driven Optimisation of Chart Designs"
+      #   link: "https://arxiv.org/abs/2504.10180"
+      #   authors: <b>Y. Wang</b>, D. Shi, G. Pan, Z. Hu, A. Oulasvirta, A. Bulling
+      #   conference: "Technical Report, pp. 1-14, 2025"
+      #   venue: "arXiv 2025"
+      #   teaser: /assets/images/publications/wang25_arxiv.png
+      #   citations: 0
 
       - title: Impact of Gaze Uncertainty on AOIs in Information Visualisations
         link: "https://collaborative-ai.org/publications/wang22_etvis/"
@@ -144,7 +144,7 @@ publications:
         citations: 150
 
 skills:
-    knowledgetitle: Knowledge Bases
+    servicestitle: Academic Services
     title: Languages
 
     language:
@@ -157,27 +157,18 @@ skills:
       - name: German
         level: 80%
 
-    knowledgeset:
-      - name: Eye Tracking, Human Visual Attention
-        level: 99%
+    services:
+      - role: Short Paper Chair
+        venues: ETRA 27’, 26’
 
-      - name: Information Visualization
-        level: 95%
+      - role: Workshop (and Tutorial) Chair
+        venues: ETRA 25’, 24’
 
-      - name: Deep Learning
-        level: 90%
+      - role: Program Committee (AC)
+        venues: CHI 27’, EuroVIS 26’, IUI 27’, 26’, 25’, VINCI 25’
 
-      - name: Computer Vision
-        level: 90%
-
-      - name: Human Computer Interaction
-        level: 88%
-
-      - name: VR/AR
-        level: 85%
-
-      - name: Natural Language Processing
-        level: 75%
+      - role: Workshop Organiser
+        venues: '<a href="https://adapt-workshop.github.io/2026/" target="_blank" rel="noopener">ADAPT@MUM 26’</a>, <a href="https://www.etvis-workshop.org/etvis-2025.html" target="_blank" rel="noopener">ETVIS@ETRA 25’</a>, <a href="https://www.petmei.org/2023/index.html" target="_blank" rel="noopener">PETMEI@ETRA 23’</a>'
 
 footer: >
     Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a>

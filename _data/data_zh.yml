@@ -121,13 +121,13 @@ publications:
         teaser: /assets/images/publications/wang23_tvcg.png
         citations: 45
 
-      - title: "ChartOptimiser: Task-driven Optimisation of Chart Designs"
-        link: "https://arxiv.org/abs/2504.10180"
-        authors: <b>Y. Wang</b>, D. Shi, G. Pan, Z. Hu, A. Oulasvirta, A. Bulling
-        conference: "Technical Report, pp. 1-14, 2025"
-        venue: "arXiv 2025"
-        teaser: /assets/images/publications/wang25_arxiv.png
-        citations: 0
+      # - title: "ChartOptimiser: Task-driven Optimisation of Chart Designs"
+      #   link: "https://arxiv.org/abs/2504.10180"
+      #   authors: <b>Y. Wang</b>, D. Shi, G. Pan, Z. Hu, A. Oulasvirta, A. Bulling
+      #   conference: "Technical Report, pp. 1-14, 2025"
+      #   venue: "arXiv 2025"
+      #   teaser: /assets/images/publications/wang25_arxiv.png
+      #   citations: 0
 
       - title: Impact of Gaze Uncertainty on AOIs in Information Visualisations
         link: "https://collaborative-ai.org/publications/wang22_etvis/"
@@ -146,7 +146,7 @@ publications:
         citations: 150
 
 skills:
-    knowledgetitle: 专业领域
+    servicestitle: 学术服务
     title: 语言能力
 
     language:
@@ -159,27 +159,18 @@ skills:
       - name: 德语
         level: 80%
 
-    knowledgeset:
-      - name: 眼动追踪与人类视觉注意力
-        level: 99%
+    services:
+      - role: 短文主席
+        venues: ETRA 27’, 26’
 
-      - name: 信息可视化
-        level: 95%
+      - role: 工作坊（及教程）主席
+        venues: ETRA 25’, 24’
 
-      - name: 深度学习
-        level: 90%
+      - role: 程序委员会 (AC)
+        venues: CHI 27’, EuroVIS 26’, IUI 27’, 26’, 25’, VINCI 25’
 
-      - name: 计算机视觉
-        level: 90%
-
-      - name: 人机交互
-        level: 88%
-
-      - name: 虚拟现实 / 增强现实
-        level: 85%
-
-      - name: 自然语言处理
-        level: 75%
+      - role: 研讨会组织者
+        venues: '<a href="https://adapt-workshop.github.io/2026/" target="_blank" rel="noopener">ADAPT@MUM 26’</a>, <a href="https://www.etvis-workshop.org/etvis-2025.html" target="_blank" rel="noopener">ETVIS@ETRA 25’</a>, <a href="https://www.petmei.org/2023/index.html" target="_blank" rel="noopener">PETMEI@ETRA 23’</a>'
 
 footer: >
     由 <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a> 设计 <i class="fas fa-heart"></i>

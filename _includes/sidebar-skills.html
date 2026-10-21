@@ -17,15 +17,13 @@
   </ul>
   {% endif %}
 
-  {% if skills.knowledgeset %}
-  <h2 class="container-block-title">{{ skills.knowledgetitle }}</h2>
-  <ul class="list-unstyled sidebar-skillset">
-    {% for skill in skills.knowledgeset %}
+  {% if skills.services %}
+  <h2 class="container-block-title">{{ skills.servicestitle }}</h2>
+  <ul class="list-unstyled sidebar-services">
+    {% for service in skills.services %}
     <li>
-      <div class="sidebar-skill-name">{{ skill.name }}</div>
-      <div class="sidebar-skill-bar">
-        <div class="sidebar-skill-bar-inner" style="width: {{ skill.level }};"></div>
-      </div>
+      <div class="sidebar-service-role">{{ service.role }}</div>
+      <div class="sidebar-service-venues">{{ service.venues }}</div>
     </li>
     {% endfor %}
   </ul>
