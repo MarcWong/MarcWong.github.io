@@ -111,7 +111,7 @@ publications:
         conference: "ACM SIGCHI Conference on Human Factors in Computing Systems"
         venue: "CHI 2024"
         teaser: /assets/images/publications/wang24_chi.png
-        citations: 31
+        citations: 32
 
       - title: "Scanpath Prediction on Information Visualisations"
         link: "https://collaborative-ai.org/publications/wang23_tvcg/"
@@ -119,7 +119,7 @@ publications:
         conference: "IEEE Transactions on Visualization and Computer Graphics, Volume 30, Issue 7, 2023"
         venue: "TVCG"
         teaser: /assets/images/publications/wang23_tvcg.png
-        citations: 45
+        citations: 46
 
       # - title: "ChartOptimiser: Task-driven Optimisation of Chart Designs"
       #   link: "https://arxiv.org/abs/2504.10180"
@@ -135,7 +135,7 @@ publications:
         conference: "2022 Symposium on Eye Tracking Research and Applications"
         venue: "ETRA 2022"
         teaser: /assets/images/publications/wang22_etvis.png
-        citations: 15
+        citations: 16
 
       - title: Large-scale Structure from Motion with Semantic Constraints of Aerial Images
         link: "https://link.springer.com/chapter/10.1007/978-3-030-03398-9_30"
@@ -143,7 +143,7 @@ publications:
         conference: "Chinese Conference on Pattern Recognition and Computer Vision"
         venue: "PRCV 2018"
         teaser: /assets/images/publications/wang18_prcv.png
-        citations: 150
+        citations: 152
 
 skills:
     servicestitle: 学术服务
